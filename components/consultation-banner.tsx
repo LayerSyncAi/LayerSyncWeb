@@ -44,7 +44,7 @@ export default function ConsultationBanner() {
   return (
     <div
       ref={bannerRef}
-      className={`w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden transition-all duration-1000 ${
+      className={`w-full bg-gradient-to-r from-brand-orange via-brand-amber to-brand-green relative overflow-hidden transition-all duration-1000 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
@@ -94,7 +94,7 @@ export default function ConsultationBanner() {
             <Button
               size="lg"
               onClick={() => scrollToSection("#contact")}
-              className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg font-bold rounded-2xl min-h-[56px] shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+              className="w-full sm:w-auto bg-white text-brand-orange hover:bg-gray-100 px-8 py-6 text-lg font-bold rounded-2xl min-h-[56px] shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
             >
               <Phone className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
               Book Your Free Consultation

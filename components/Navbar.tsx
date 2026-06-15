@@ -164,7 +164,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => 
                             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
                                 <button
                                     onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
-                                    className="text-2xl font-light text-white hover:text-blue-500 transition-colors flex items-center justify-center gap-2 mx-auto"
+                                    className="text-2xl font-light text-white hover:text-brand-orange transition-colors flex items-center justify-center gap-2 mx-auto"
                                 >
                                     Solutions <ChevronDown className={`w-5 h-5 transition-transform ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} />
                                 </button>
@@ -205,7 +205,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => 
                                 >
                                     <button
                                         onClick={() => scrollToSection(link.href)}
-                                        className="block text-2xl font-light text-white hover:text-blue-500 transition-colors mx-auto"
+                                        className="block text-2xl font-light text-white hover:text-brand-orange transition-colors mx-auto"
                                     >
                                         {link.name}
                                     </button>

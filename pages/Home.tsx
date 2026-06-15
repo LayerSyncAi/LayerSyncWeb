@@ -38,8 +38,8 @@ export const Home: React.FC = () => {
             subtitle: "Virtual Staging • Lead Qualification • CRM Sync",
             desc: "Transform empty listings into furnished dream homes. Qualify leads 24/7 on WhatsApp. Close faster.",
             href: "/solutions/real-estate",
-            gradient: "from-purple-600 to-pink-600",
-            glowColor: "purple",
+            gradient: "from-brand-orange to-brand-amber",
+            glowColor: "orange",
             icon: <Building2 className="w-7 h-7" />,
             stats: [
                 { value: "98%", label: "Cost Reduction" },
@@ -52,8 +52,8 @@ export const Home: React.FC = () => {
             subtitle: "Workflow Agents • ROI Recovery • Zero-Code",
             desc: "Identify and eliminate manual bottlenecks. Our AI agents handle admin, invoicing, and scheduling autonomously.",
             href: "/solutions/smb",
-            gradient: "from-blue-600 to-cyan-600",
-            glowColor: "blue",
+            gradient: "from-brand-amber to-brand-green",
+            glowColor: "amber",
             icon: <Cpu className="w-7 h-7" />,
             stats: [
                 { value: "$65K+", label: "Annual Savings" },
@@ -66,8 +66,8 @@ export const Home: React.FC = () => {
             subtitle: "Immersive Portals • 3D Experiences • Conversion",
             desc: "We engineer premium digital platforms that don't just look stunning — they convert visitors into customers.",
             href: "/solutions/web-dev",
-            gradient: "from-cyan-600 to-emerald-600",
-            glowColor: "cyan",
+            gradient: "from-brand-orange to-brand-green",
+            glowColor: "green",
             icon: <Globe className="w-7 h-7" />,
             stats: [
                 { value: "3x", label: "Conversion Rate" },
@@ -157,7 +157,7 @@ export const Home: React.FC = () => {
                                     decoding="async"
                                     width="520"
                                     height="520"
-                                    className="w-[320px] md:w-[440px] lg:w-[520px] animate-float drop-shadow-[0_0_40px_rgba(107,76,255,0.15)]"
+                                    className="w-[320px] md:w-[440px] lg:w-[520px] animate-float drop-shadow-[0_0_40px_rgba(211,97,53,0.15)]"
                                 />
                             </motion.div>
                         </div>
@@ -231,7 +231,7 @@ export const Home: React.FC = () => {
                                     decoding="async"
                                     width="520"
                                     height="520"
-                                    className="w-[320px] md:w-[440px] lg:w-[520px] animate-float drop-shadow-[0_0_40px_rgba(34,211,238,0.15)]"
+                                    className="w-[320px] md:w-[440px] lg:w-[520px] animate-float drop-shadow-[0_0_40px_rgba(127,176,105,0.15)]"
                                     style={{ animationDelay: '2s' }}
                                 />
                             </motion.div>
@@ -249,7 +249,7 @@ export const Home: React.FC = () => {
                             {[
                                 { icon: <Zap className="w-6 h-6" />, title: "Deploy in 48 Hours", desc: "From audit to live AI agents in under two days. No months-long implementations.", color: "text-yellow-400", bg: "bg-yellow-500/10" },
                                 { icon: <Shield className="w-6 h-6" />, title: "Enterprise Security", desc: "SOC 2 compliant infrastructure. Your data never leaves your environment.", color: "text-green-400", bg: "bg-green-500/10" },
-                                { icon: <TrendingUp className="w-6 h-6" />, title: "Measurable ROI", desc: "Every deployment includes a custom ROI dashboard. If we don't save you money, we work for free.", color: "text-blue-400", bg: "bg-blue-500/10" }
+                                { icon: <TrendingUp className="w-6 h-6" />, title: "Measurable ROI", desc: "Every deployment includes a custom ROI dashboard. If we don't save you money, we work for free.", color: "text-brand-orange-light", bg: "bg-brand-orange/10" }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -270,7 +270,7 @@ export const Home: React.FC = () => {
 
                 <Suspense fallback={
                     <div className="py-20 flex items-center justify-center">
-                        <div className="w-8 h-8 border-2 border-gray-200 border-t-blue-500 rounded-full animate-spin opacity-50" />
+                        <div className="w-8 h-8 border-2 border-gray-200 border-t-brand-orange rounded-full animate-spin opacity-50" />
                     </div>
                 }>
                     <Pricing isDarkMode={safeDarkMode} />
@@ -303,14 +303,14 @@ export const Home: React.FC = () => {
                                     decoding="async"
                                     width="440"
                                     height="440"
-                                    className="w-[280px] md:w-[380px] lg:w-[440px] animate-float drop-shadow-[0_0_40px_rgba(75,107,255,0.15)]"
+                                    className="w-[280px] md:w-[380px] lg:w-[440px] animate-float drop-shadow-[0_0_40px_rgba(169,136,79,0.18)]"
                                     style={{ animationDelay: '4s' }}
                                 />
                             </motion.div>
                         </div>
                         <Suspense fallback={
                             <div className="py-10 flex items-center justify-center">
-                                <div className="w-6 h-6 border-2 border-gray-200 border-t-purple-500 rounded-full animate-spin opacity-50" />
+                                <div className="w-6 h-6 border-2 border-gray-200 border-t-brand-orange rounded-full animate-spin opacity-50" />
                             </div>
                         }>
                             <FAQ isDarkMode={safeDarkMode} />
@@ -326,7 +326,7 @@ export const Home: React.FC = () => {
                         viewport={{ once: true }}
                         className={`p-10 md:p-24 lg:p-32 rounded-[40px] md:rounded-[64px] border border-black/5 dark:border-white/5 glass-card text-center relative overflow-hidden`}
                     >
-                        <div className={`ambient-glow absolute inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-cyan-600/10 pointer-events-none`} />
+                        <div className={`ambient-glow absolute inset-0 bg-gradient-to-br from-brand-orange/10 via-brand-amber/5 to-brand-green/10 pointer-events-none`} />
                         <div className="relative z-10">
                             <h3 className="hero-heading mb-8 md:mb-16 text-shimmer leading-[1.1]">Ready to *Sync*?</h3>
                             <p className="sub-heading mb-12 md:mb-20 max-w-3xl mx-auto">We are accepting a limited number of partners for our early program. Secure your free AI audit today.</p>

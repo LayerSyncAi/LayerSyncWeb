@@ -91,14 +91,14 @@ const companyStats = [
     number: "Select",
     label: "Business Partners",
     description: "Currently automating growth for businesses ready to scale",
-    color: "from-blue-500 to-blue-600",
+    color: "from-brand-orange to-brand-orange-dark",
   },
   {
     icon: Calendar,
     number: "2+",
     label: "Years Experience",
     description: "Deep expertise in AI automation",
-    color: "from-purple-500 to-purple-600",
+    color: "from-brand-orange to-brand-orange-dark",
   },
   {
     icon: Award,
@@ -157,7 +157,7 @@ export default function AboutSection() {
       <div className="container-responsive">
         {/* Section Header - Mobile optimized */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-brand-orange-light/20 text-brand-orange-dark rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
             <Users className="w-3 sm:w-4 h-3 sm:h-4 mr-1.5 sm:mr-2" />
             About LayerSync AI
           </div>
@@ -175,7 +175,7 @@ export default function AboutSection() {
             <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="pb-4 sm:pb-6">
                 <CardTitle className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                  <Target className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3 text-blue-600 flex-shrink-0" />
+                  <Target className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3 text-brand-orange flex-shrink-0" />
                   Our Mission
                 </CardTitle>
               </CardHeader>
@@ -189,7 +189,7 @@ export default function AboutSection() {
             <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="pb-4 sm:pb-6">
                 <CardTitle className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                  <Globe className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3 text-purple-600 flex-shrink-0" />
+                  <Globe className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3 text-brand-orange flex-shrink-0" />
                   Our Vision
                 </CardTitle>
               </CardHeader>
@@ -250,7 +250,7 @@ export default function AboutSection() {
                 key={member.id}
                 className={`cursor-pointer transition-all duration-300 hover:shadow-2xl ${
                   hoveredMember === member.id ? "shadow-xl -translate-y-2" : ""
-                } ${expandedMember === member.id ? "ring-2 ring-blue-500" : ""}`}
+                } ${expandedMember === member.id ? "ring-2 ring-brand-orange" : ""}`}
                 onMouseEnter={() => setHoveredMember(member.id)}
                 onMouseLeave={() => setHoveredMember(null)}
                 onClick={() => setExpandedMember(expandedMember === member.id ? null : member.id)}
@@ -259,12 +259,12 @@ export default function AboutSection() {
                   {/* Basic Info */}
                   <div className="text-center mb-4 sm:mb-6">
                     <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{member.name}</h4>
-                    <p className="text-blue-600 font-semibold mb-3 text-sm sm:text-base">{member.role}</p>
+                    <p className="text-brand-orange font-semibold mb-3 text-sm sm:text-base">{member.role}</p>
                     <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{member.bio}</p>
                   </div>
 
                   {/* Quote */}
-                  <div className="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 mb-4 sm:mb-6 italic text-gray-800 text-sm sm:text-base">
+                  <div className="bg-brand-orange-light border-l-4 border-brand-orange p-3 sm:p-4 mb-4 sm:mb-6 italic text-gray-800 text-sm sm:text-base">
                     "{member.quote}"
                   </div>
 
@@ -274,7 +274,7 @@ export default function AboutSection() {
                     <ul className="space-y-1 sm:space-y-2">
                       {member.focus.map((focus, index) => (
                         <li key={index} className="flex items-start text-sm text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-2 mt-2 flex-shrink-0"></div>
                           {focus}
                         </li>
                       ))}
@@ -286,7 +286,7 @@ export default function AboutSection() {
                     {member.expertise.map((skill, index) => (
                       <span
                         key={index}
-                        className="px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium"
+                        className="px-2 sm:px-3 py-1 bg-brand-orange-light/20 text-brand-orange-dark rounded-full text-xs sm:text-sm font-medium"
                       >
                         {skill}
                       </span>
@@ -338,8 +338,8 @@ export default function AboutSection() {
                   className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer group"
                 >
                   <CardContent className="p-4 sm:p-6 text-center">
-                    <div className="w-10 sm:w-12 h-10 sm:h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-blue-200 transition-colors duration-300">
-                      <IconComponent className="w-5 sm:w-6 h-5 sm:h-6 text-blue-600" />
+                    <div className="w-10 sm:w-12 h-10 sm:h-12 bg-brand-orange-light rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-brand-orange-light transition-colors duration-300">
+                      <IconComponent className="w-5 sm:w-6 h-5 sm:h-6 text-brand-orange" />
                     </div>
                     <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900">{industry.name}</h4>
                   </CardContent>
@@ -365,8 +365,8 @@ export default function AboutSection() {
                 <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="p-4 sm:p-6 lg:p-8">
                     <div className="flex items-start">
-                      <div className="w-10 sm:w-12 h-10 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
-                        <IconComponent className="w-5 sm:w-6 h-5 sm:h-6 text-blue-600" />
+                      <div className="w-10 sm:w-12 h-10 sm:h-12 bg-brand-orange-light rounded-xl flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                        <IconComponent className="w-5 sm:w-6 h-5 sm:h-6 text-brand-orange" />
                       </div>
                       <div>
                         <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{prop.title}</h4>
@@ -385,21 +385,21 @@ export default function AboutSection() {
         </div>
 
         {/* CTA Section - Mobile optimized */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-8 lg:p-12 text-white">
+        <div className="text-center bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-2xl p-6 sm:p-8 lg:p-12 text-white">
           <div className="flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6">
             <Play className="w-6 sm:w-8 h-6 sm:h-8 mb-2 sm:mb-0 sm:mr-3 flex-shrink-0" />
             <h3 className="text-xl sm:text-2xl font-bold text-center sm:text-left">
               Ready to Experience the LayerSync Difference?
             </h3>
           </div>
-          <p className="text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p className="text-brand-orange-light mb-6 sm:mb-8 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed">
             Join our select group of high-impact businesses that have transformed their operations with our proven AI
             automation solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="w-full sm:w-auto bg-white text-blue-700 hover:bg-blue-50 px-6 sm:px-8 py-3 font-semibold transition-all duration-300 hover:scale-105 min-h-[48px] touch-manipulation"
+              className="w-full sm:w-auto bg-white text-brand-orange-dark hover:bg-brand-orange-light px-6 sm:px-8 py-3 font-semibold transition-all duration-300 hover:scale-105 min-h-[48px] touch-manipulation"
             >
               Schedule Free Strategy Session
             </Button>
@@ -407,7 +407,7 @@ export default function AboutSection() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("#pricing")}
-              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-blue-700 px-6 sm:px-8 py-3 font-semibold transition-all duration-300 hover:scale-105 bg-transparent min-h-[48px] touch-manipulation"
+              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-brand-orange-dark px-6 sm:px-8 py-3 font-semibold transition-all duration-300 hover:scale-105 bg-transparent min-h-[48px] touch-manipulation"
             >
               View Consultation Options
               <ExternalLink className="w-4 h-4 ml-2" />

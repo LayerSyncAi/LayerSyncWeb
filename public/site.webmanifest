@@ -1,0 +1,14 @@
+{
+  "name": "LayerSync AI",
+  "short_name": "LayerSync",
+  "description": "We layer AI into your business operations — automating what's manual, scaling what's human, and building what's next.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#D36135",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

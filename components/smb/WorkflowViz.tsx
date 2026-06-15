@@ -4,16 +4,16 @@ import { Mail, Database, Calendar, DollarSign, ArrowRight } from 'lucide-react';
 
 export const WorkflowViz: React.FC = () => {
     const steps = [
-        { icon: <Mail className="w-6 h-6" />, label: "Inquiry", color: "bg-pink-500" },
-        { icon: <Database className="w-6 h-6" />, label: "CRM Entry", color: "bg-purple-500" },
-        { icon: <Calendar className="w-6 h-6" />, label: "Booking", color: "bg-blue-500" },
+        { icon: <Mail className="w-6 h-6" />, label: "Inquiry", color: "bg-brand-orange" },
+        { icon: <Database className="w-6 h-6" />, label: "CRM Entry", color: "bg-brand-orange-dark" },
+        { icon: <Calendar className="w-6 h-6" />, label: "Booking", color: "bg-brand-amber" },
         { icon: <DollarSign className="w-6 h-6" />, label: "Invoice", color: "bg-green-500" }
     ];
 
     return (
         <section className="relative py-20 px-6 max-w-7xl mx-auto z-20">
             <div className="text-center mb-20">
-                <h2 className="text-4xl font-light mb-6 text-gray-900 dark:text-dark-text-primary">The <span className="text-blue-600 dark:text-blue-500">Invisible</span> Workforce</h2>
+                <h2 className="text-4xl font-light mb-6 text-gray-900 dark:text-dark-text-primary">The <span className="text-brand-orange dark:text-brand-orange">Invisible</span> Workforce</h2>
                 <p className="sub-heading max-w-2xl mx-auto text-gray-600 dark:text-dark-text-secondary">LayerSync replaces your "Busy Work" with intelligent, tireless agents that run 24/7.</p>
             </div>
 
@@ -60,7 +60,7 @@ export const WorkflowViz: React.FC = () => {
                     style={{ translateY: "-50%" }}
                 />
                 <motion.div
-                    className="hidden md:block absolute top-1/2 left-0 w-4 h-4 bg-blue-500 rounded-full z-20 shadow-[0_0_20px_#3b82f6]"
+                    className="hidden md:block absolute top-1/2 left-0 w-4 h-4 bg-brand-orange rounded-full z-20 shadow-[0_0_20px_#D36135]"
                     animate={{ left: "100%" }}
                     transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 1.5 }}
                     style={{ translateY: "-50%" }}

@@ -55,7 +55,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ isDarkMode }) =>
                     transition={{ duration: 0.7 }}
                     className="text-center mb-16 md:mb-20"
                 >
-                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-cyan-400/60' : 'text-cyan-600/60'}`}>
+                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-brand-green-light/60' : 'text-brand-green/60'}`}>
                         Our Process
                     </span>
                     <h2 className={`hero-heading mt-4 mb-6 text-3xl md:text-5xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
@@ -84,7 +84,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ isDarkMode }) =>
                                 className="relative flex gap-6 md:gap-8 items-start"
                             >
                                 {/* Step number circle */}
-                                <div className={`relative z-10 flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center font-mono text-xs md:text-sm font-bold border ${isDarkMode ? 'bg-[#0a0a0a] border-white/[0.08] text-cyan-400/80' : 'bg-white border-black/[0.06] text-cyan-600'} shadow-lg`}>
+                                <div className={`relative z-10 flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center font-mono text-xs md:text-sm font-bold border ${isDarkMode ? 'bg-[#0a0a0a] border-white/[0.08] text-brand-green-light/80' : 'bg-white border-black/[0.06] text-brand-green'} shadow-lg`}>
                                     {step.num}
                                 </div>
 

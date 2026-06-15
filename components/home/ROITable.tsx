@@ -19,7 +19,7 @@ export const ROITable: React.FC<ROITableProps> = ({ isDarkMode }) => {
   return (
     <section id="roi" className={`relative py-32 sm:py-60 px-6 max-w-7xl mx-auto border-t ${borderSubtle} z-20`}>
       <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-24">
-        <div className="inline-flex items-center gap-3 mb-8 py-1.5 px-5 rounded-full border border-green-500/20 text-green-500 text-[10px] uppercase tracking-[0.3em] font-medium">Regional ROI</div>
+        <div className="inline-flex items-center gap-3 mb-8 py-1.5 px-5 rounded-full border border-brand-green/20 text-brand-green text-[10px] uppercase tracking-[0.3em] font-medium">Regional ROI</div>
         <h2 className="hero-heading mb-10">Market *Efficiency*</h2>
         <p className="sub-heading max-w-2xl mx-auto">Traditional costs in Zimbabwe shouldn't stop you from scaling. We deliver world-class automation at local scale.</p>
       </motion.div>
@@ -31,16 +31,16 @@ export const ROITable: React.FC<ROITableProps> = ({ isDarkMode }) => {
               <tr className={`border-b ${borderSubtle} bg-current opacity-[0.02]`}>
                 <th className="p-10 text-[10px] uppercase tracking-[0.4em] text-gray-500 dark:text-dark-text-tertiary">Service Layer</th>
                 <th className="p-10 text-[10px] uppercase tracking-[0.4em] text-gray-500 dark:text-dark-text-tertiary">Traditional Cost</th>
-                <th className="p-10 text-[10px] uppercase tracking-[0.4em] text-blue-500">LayerSync AI</th>
+                <th className="p-10 text-[10px] uppercase tracking-[0.4em] text-brand-orange">LayerSync AI</th>
                 <th className="p-10 text-[10px] uppercase tracking-[0.4em] text-gray-500 dark:text-dark-text-tertiary">Savings</th>
               </tr>
             </thead>
             <tbody className={`divide-y ${borderSubtle}`}>
               {marketROI.map((row, i) => (
                 <tr key={i} className="hover:bg-current hover:opacity-[0.01] transition-colors group">
-                  <td className="p-10 font-medium group-hover:text-blue-500 text-gray-900 dark:text-dark-text-primary">{row.name}</td>
+                  <td className="p-10 font-medium group-hover:text-brand-orange text-gray-900 dark:text-dark-text-primary">{row.name}</td>
                   <td className="p-10 text-gray-500 dark:text-dark-text-tertiary">{row.traditional}</td>
-                  <td className="p-10 font-bold text-blue-500">{row.layerSync}</td>
+                  <td className="p-10 font-bold text-brand-orange">{row.layerSync}</td>
                   <td className="p-10 text-green-500 font-bold">{row.savings}</td>
                 </tr>
               ))}

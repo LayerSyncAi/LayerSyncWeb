@@ -45,7 +45,7 @@ const systems = [
       { icon: Award, text: "Intelligent Lead Scoring" },
     ],
     cta: "See How It Works",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-brand-orange to-brand-green",
     delay: 0,
   },
   {
@@ -62,7 +62,7 @@ const systems = [
       { icon: Activity, text: "Performance Tracking & Optimization" },
     ],
     cta: "Build My Content Engine",
-    color: "from-emerald-500 to-green-500",
+    color: "from-brand-green to-brand-green-dark",
     delay: 200,
   },
   {
@@ -79,7 +79,7 @@ const systems = [
       { icon: Calendar, text: "Project Management & Resource Allocation" },
     ],
     cta: "Automate My Operations",
-    color: "from-purple-500 to-pink-500",
+    color: "from-brand-orange to-brand-orange-dark",
     delay: 400,
   },
   {
@@ -151,9 +151,9 @@ export default function ServicesSection() {
     >
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 sm:top-20 left-10 sm:left-20 w-32 sm:w-48 lg:w-72 h-32 sm:h-48 lg:h-72 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
-        <div className="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-28 sm:w-40 lg:w-64 h-28 sm:h-40 lg:h-64 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 lg:w-96 h-48 sm:h-64 lg:h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
+        <div className="absolute top-10 sm:top-20 left-10 sm:left-20 w-32 sm:w-48 lg:w-72 h-32 sm:h-48 lg:h-72 bg-gradient-to-r from-brand-green/20 to-brand-green-dark/20 rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
+        <div className="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-28 sm:w-40 lg:w-64 h-28 sm:h-40 lg:h-64 bg-gradient-to-r from-brand-orange/20 to-brand-orange-dark/20 rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 lg:w-96 h-48 sm:h-64 lg:h-96 bg-gradient-to-r from-brand-green/10 to-brand-orange/10 rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
       </div>
 
       <div className="container-responsive relative z-10">
@@ -214,7 +214,7 @@ export default function ServicesSection() {
                   {/* Key Components */}
                   <div className="mb-6">
                     <h4 className="what-you-get-label mb-3 sm:mb-4 flex items-center text-xs sm:text-sm">
-                      <Zap className="w-3 sm:w-4 h-3 sm:h-4 mr-2 text-cyan-500" />
+                      <Zap className="w-3 sm:w-4 h-3 sm:h-4 mr-2 text-brand-green" />
                       Key Components:
                     </h4>
                     <ul className="space-y-2 sm:space-y-3">
@@ -256,8 +256,8 @@ export default function ServicesSection() {
           <div className="card-dark rounded-xl sm:rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 text-white relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0">
-              <div className="absolute top-0 right-0 w-24 sm:w-32 lg:w-64 h-24 sm:h-32 lg:h-64 bg-gradient-to-l from-blue-500/15 to-transparent rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-24 sm:w-32 lg:w-64 h-24 sm:h-32 lg:h-64 bg-gradient-to-r from-purple-500/15 to-transparent rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
+              <div className="absolute top-0 right-0 w-24 sm:w-32 lg:w-64 h-24 sm:h-32 lg:h-64 bg-gradient-to-l from-brand-orange/15 to-transparent rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-24 sm:w-32 lg:w-64 h-24 sm:h-32 lg:h-64 bg-gradient-to-r from-brand-orange/15 to-transparent rounded-full blur-xl sm:blur-2xl lg:blur-3xl"></div>
             </div>
 
             <div className="relative z-10">

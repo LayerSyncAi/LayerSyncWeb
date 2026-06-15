@@ -29,7 +29,7 @@ export const BusinessImpactSection: React.FC<BusinessImpactSectionProps> = ({ is
                     transition={{ duration: 0.7 }}
                     className="text-center mb-16 md:mb-20"
                 >
-                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-cyan-400/60' : 'text-cyan-600/60'}`}>
+                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-brand-green-light/60' : 'text-brand-green/60'}`}>
                         Business Impact
                     </span>
                     <h2 className={`hero-heading mt-4 mb-6 text-3xl md:text-5xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
@@ -53,7 +53,7 @@ export const BusinessImpactSection: React.FC<BusinessImpactSectionProps> = ({ is
                             transition={{ duration: 0.45, delay: index * 0.06 }}
                             className={`flex items-center gap-4 p-5 rounded-xl group transition-all duration-300 ${isDarkMode ? 'hover:bg-white/[0.02]' : 'hover:bg-black/[0.02]'}`}
                         >
-                            <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${isDarkMode ? 'bg-cyan-500/8 text-cyan-400/60 group-hover:text-cyan-400' : 'bg-cyan-50 text-cyan-600/60 group-hover:text-cyan-600'} transition-colors duration-300`}>
+                            <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${isDarkMode ? 'bg-brand-green/8 text-brand-green-light/60 group-hover:text-brand-green-light' : 'bg-brand-green-light/10 text-brand-green/60 group-hover:text-brand-green'} transition-colors duration-300`}>
                                 <item.icon className="w-5 h-5" />
                             </div>
                             <span className={`text-sm md:text-base font-medium ${isDarkMode ? 'text-white/60 group-hover:text-white/90' : 'text-gray-600 group-hover:text-gray-900'} transition-colors duration-300`}>

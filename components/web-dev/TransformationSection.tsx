@@ -32,7 +32,7 @@ export const TransformationSection: React.FC<TransformationSectionProps> = ({ is
                     transition={{ duration: 0.7 }}
                     className="text-center mb-16 md:mb-20"
                 >
-                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-cyan-400/60' : 'text-cyan-600/60'}`}>
+                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-brand-green-light/60' : 'text-brand-green/60'}`}>
                         The Transformation
                     </span>
                     <h2 className={`hero-heading mt-4 mb-6 text-3xl md:text-5xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
@@ -63,13 +63,13 @@ export const TransformationSection: React.FC<TransformationSectionProps> = ({ is
                             </div>
 
                             {/* Arrow */}
-                            <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-cyan-500/10' : 'bg-cyan-50'} group-hover:scale-110 transition-transform duration-500`}>
-                                <ArrowRight className={`w-4 h-4 ${isDarkMode ? 'text-cyan-400' : 'text-cyan-600'}`} />
+                            <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-brand-green/10' : 'bg-brand-green-light/10'} group-hover:scale-110 transition-transform duration-500`}>
+                                <ArrowRight className={`w-4 h-4 ${isDarkMode ? 'text-brand-green-light' : 'text-brand-green'}`} />
                             </div>
 
                             {/* After */}
                             <div className="flex-1 text-left">
-                                <span className={`text-sm md:text-base font-semibold ${isDarkMode ? 'text-white/80 group-hover:text-cyan-400' : 'text-gray-800 group-hover:text-cyan-600'} transition-colors duration-500`}>
+                                <span className={`text-sm md:text-base font-semibold ${isDarkMode ? 'text-white/80 group-hover:text-brand-green-light' : 'text-gray-800 group-hover:text-brand-green'} transition-colors duration-500`}>
                                     {item.after}
                                 </span>
                             </div>

@@ -11,8 +11,8 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ isDarkMode }) 
         <section id="contact" className="relative py-28 md:py-40 px-6 overflow-hidden">
             {/* Background ambient glow */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full blur-[200px] ${isDarkMode ? 'bg-cyan-500/5' : 'bg-cyan-400/8'}`} />
-                <div className={`absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full blur-[130px] ${isDarkMode ? 'bg-purple-500/4' : 'bg-purple-400/6'}`} />
+                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full blur-[200px] ${isDarkMode ? 'bg-brand-green/5' : 'bg-brand-green-light/8'}`} />
+                <div className={`absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full blur-[130px] ${isDarkMode ? 'bg-brand-orange/4' : 'bg-brand-orange-light/6'}`} />
             </div>
 
             {/* Top divider */}

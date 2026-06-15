@@ -66,7 +66,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ isDarkMode }) 
                     transition={{ duration: 0.7 }}
                     className="text-center mb-16 md:mb-20"
                 >
-                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-cyan-400/60' : 'text-cyan-600/60'}`}>
+                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-brand-green-light/60' : 'text-brand-green/60'}`}>
                         What We Offer
                     </span>
                     <h2 className={`hero-heading mt-4 mb-6 text-3xl md:text-5xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
@@ -88,9 +88,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ isDarkMode }) 
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: '-50px' }}
                             transition={{ duration: 0.45, delay: index * 0.06 }}
-                            className={`glass-card rounded-2xl p-6 group hover:scale-[1.02] ${isDarkMode ? 'hover:border-purple-500/15' : 'hover:border-purple-400/20'}`}
+                            className={`glass-card rounded-2xl p-6 group hover:scale-[1.02] ${isDarkMode ? 'hover:border-brand-orange/15' : 'hover:border-brand-orange-light/20'}`}
                         >
-                            <div className={`w-9 h-9 rounded-lg flex items-center justify-center mb-4 ${isDarkMode ? 'bg-purple-500/8 text-purple-400/70' : 'bg-purple-50 text-purple-600'}`}>
+                            <div className={`w-9 h-9 rounded-lg flex items-center justify-center mb-4 ${isDarkMode ? 'bg-brand-orange/8 text-brand-orange-light/70' : 'bg-brand-orange-light/10 text-brand-orange'}`}>
                                 <service.icon className="w-4.5 h-4.5" />
                             </div>
                             <h3 className={`text-sm font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>

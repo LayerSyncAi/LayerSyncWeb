@@ -17,7 +17,7 @@ export const LaptopCarousel: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }
     return (
         <section className="relative py-12 md:py-20 px-4 md:px-6 max-w-7xl mx-auto z-20">
             <div className="text-center mb-10 md:mb-16">
-                <h2 className={`hero-heading mb-4 md:mb-6 text-3xl md:text-5xl ${isDarkMode ? 'text-dark-text-primary' : 'text-gray-900'}`}>Digital <span className={`${isDarkMode ? 'text-cyan-500' : 'text-cyan-600'}`}>*Experiences*</span></h2>
+                <h2 className={`hero-heading mb-4 md:mb-6 text-3xl md:text-5xl ${isDarkMode ? 'text-dark-text-primary' : 'text-gray-900'}`}>Digital <span className={`${isDarkMode ? 'text-brand-green' : 'text-brand-green'}`}>*Experiences*</span></h2>
                 <p className={`sub-heading max-w-2xl mx-auto text-sm md:text-lg ${isDarkMode ? 'text-dark-text-secondary' : 'text-gray-600'}`}>We don't just build websites. We engineer immersive digital platforms that convert.</p>
             </div>
 
@@ -49,7 +49,7 @@ export const LaptopCarousel: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }
                                 <h3 className="text-lg md:text-2xl font-bold text-white mb-1">{projects[currentIndex].title}</h3>
                                 <p className="text-gray-300 text-xs md:text-sm">{projects[currentIndex].desc}</p>
                             </div>
-                            <button className="p-2 md:p-3 rounded-full bg-cyan-500 text-black hover:scale-110 transition-transform"><ExternalLink className="w-4 h-4 md:w-5 md:h-5" /></button>
+                            <button className="p-2 md:p-3 rounded-full bg-brand-green text-black hover:scale-110 transition-transform"><ExternalLink className="w-4 h-4 md:w-5 md:h-5" /></button>
                         </div>
                     </div>
 

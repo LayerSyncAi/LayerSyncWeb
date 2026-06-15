@@ -21,7 +21,7 @@ export const RealEstateFeatures: React.FC = () => {
         <section className="relative py-20 md:py-32 px-4 md:px-6 max-w-7xl mx-auto z-20">
             <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center mb-20 md:mb-32">
                 <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                    <h2 className="text-3xl md:text-5xl font-light mb-6 text-gray-900 dark:text-white">AI Virtual <span className="text-purple-600 dark:text-purple-400 font-normal italic">Staging</span></h2>
+                    <h2 className="text-3xl md:text-5xl font-light mb-6 text-gray-900 dark:text-white">AI Virtual <span className="text-brand-orange dark:text-brand-orange-light font-normal italic">Staging</span></h2>
                     <p className="text-sm md:text-lg text-gray-600 dark:text-white/60 mb-8 leading-relaxed">
                         Transform empty listings into fully furnished dream homes in seconds. Our AI understands architectural context, lighting, and style preferences to deliver photo-realistic results at a fraction of the cost.
                     </p>
@@ -35,7 +35,7 @@ export const RealEstateFeatures: React.FC = () => {
                                 transition={{ delay: i * 0.1 }}
                                 className="flex items-center gap-3 text-sm text-gray-700 dark:text-white/80"
                             >
-                                <span className="w-1.5 h-1.5 rounded-full bg-purple-500" /> {item}
+                                <span className="w-1.5 h-1.5 rounded-full bg-brand-orange" /> {item}
                             </motion.li>
                         ))}
                     </ul>
@@ -78,7 +78,7 @@ export const RealEstateFeatures: React.FC = () => {
                         style={{ left: `${Math.min(Math.max(sliderPosition, 10), 85)}%`, transform: 'translateX(-50%)' }}
                     >
                         <div className={`px-4 py-1.5 rounded-full backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white transition-colors duration-300 whitespace-nowrap ${sliderPosition >= 50
-                            ? 'bg-purple-600/80'
+                            ? 'bg-brand-orange/80'
                             : 'bg-black/60'
                             }`}>
                             {sliderPosition >= 50 ? 'AI Staged' : 'Before'}

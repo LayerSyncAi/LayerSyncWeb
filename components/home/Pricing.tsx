@@ -77,12 +77,12 @@ export const Pricing: React.FC<PricingProps> = ({ isDarkMode }) => {
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.15 }}
                         className={`p-8 md:p-10 rounded-[32px] md:rounded-[48px] border flex flex-col transition-all duration-500 hover:scale-[1.02] card-hover-glow ${p.popular
-                            ? 'border-blue-500/30 bg-blue-500/5 glass-card shadow-2xl shadow-blue-900/10'
+                            ? 'border-brand-orange/30 bg-brand-orange/5 glass-card shadow-2xl shadow-brand-orange-dark/10'
                             : `border-black/5 dark:border-white/5 glass-card`
                             }`}
                     >
                         {p.popular && (
-                            <div className="text-[9px] uppercase tracking-[0.3em] font-black text-blue-400 mb-6">Most Popular</div>
+                            <div className="text-[9px] uppercase tracking-[0.3em] font-black text-brand-orange-light mb-6">Most Popular</div>
                         )}
                         <div className="text-4xl mb-6">{p.icon}</div>
                         <h3 className="text-xl md:text-2xl font-light mb-2 text-gray-900 dark:text-dark-text-primary">{p.name}</h3>
@@ -91,7 +91,7 @@ export const Pricing: React.FC<PricingProps> = ({ isDarkMode }) => {
                         <div className="space-y-4 mb-10 flex-1">
                             {p.features.map((f, fi) => (
                                 <div key={fi} className="flex items-start gap-3 text-sm text-gray-600 dark:text-dark-text-secondary">
-                                    <Check className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                                    <Check className="w-4 h-4 text-brand-orange mt-0.5 flex-shrink-0" />
                                     <span>{f}</span>
                                 </div>
                             ))}

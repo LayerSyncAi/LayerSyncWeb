@@ -31,7 +31,7 @@ export const ChatbotViz: React.FC = () => {
 
     return (
         <section className="relative py-32 px-6 max-w-7xl mx-auto z-20">
-            <div className="glass-card rounded-[48px] p-10 md:p-16 border border-black/5 dark:border-white/5 bg-white/50 dark:bg-gradient-to-br dark:from-purple-900/20 dark:to-blue-900/20">
+            <div className="glass-card rounded-[48px] p-10 md:p-16 border border-black/5 dark:border-white/5 bg-white/50 dark:bg-gradient-to-br dark:from-brand-orange-dark/20 dark:to-brand-orange-dark/20">
                 <div className="grid md:grid-cols-2 gap-16">
                     <div className="order-2 md:order-1 relative h-[500px] bg-white dark:bg-black/40 rounded-[32px] border border-black/10 dark:border-white/10 p-6 overflow-hidden flex flex-col shadow-inner dark:shadow-none">
                         <div className="flex items-center gap-3 border-b border-black/5 dark:border-white/5 pb-4 mb-4">
@@ -52,7 +52,7 @@ export const ChatbotViz: React.FC = () => {
                                     >
                                         <div className={`max-w-[80%] rounded-2xl p-4 text-sm leading-relaxed ${msg.sender === 'user'
                                             ? 'bg-black/5 dark:bg-white/10 text-gray-800 dark:text-dark-text-primary rounded-br-none'
-                                            : 'bg-purple-600 text-white rounded-bl-none shadow-lg shadow-purple-900/20'
+                                            : 'bg-brand-orange text-white rounded-bl-none shadow-lg shadow-brand-orange-dark/20'
                                             }`}>
                                             {msg.text}
                                         </div>
@@ -63,17 +63,17 @@ export const ChatbotViz: React.FC = () => {
 
                         <div className="mt-4 pt-4 border-t border-black/5 dark:border-white/5 flex gap-3">
                             <div className="flex-1 h-10 rounded-full bg-black/5 dark:bg-white/5 animate-pulse" />
-                            <div className="w-10 h-10 rounded-full bg-purple-600/50 flex items-center justify-center">
+                            <div className="w-10 h-10 rounded-full bg-brand-orange/50 flex items-center justify-center">
                                 <ArrowRight className="w-4 h-4 text-white" />
                             </div>
                         </div>
                     </div>
 
                     <div className="order-1 md:order-2 flex flex-col justify-center text-gray-900 dark:text-dark-text-primary">
-                        <div className="w-16 h-16 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-8 text-purple-500 dark:text-purple-400">
+                        <div className="w-16 h-16 rounded-2xl bg-brand-orange/20 flex items-center justify-center mb-8 text-brand-orange dark:text-brand-orange-light">
                             <MessageSquare className="w-8 h-8" />
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-light mb-6">Automated <span className="text-purple-600 dark:text-purple-400 font-normal">*Lead Qual*</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-light mb-6">Automated <span className="text-brand-orange dark:text-brand-orange-light font-normal">*Lead Qual*</span></h2>
                         <p className="text-lg text-gray-600 dark:text-dark-text-secondary mb-8 leading-relaxed">
                             Never miss a lead again. Our AI agent handles inquiries via WhatsApp, SMS, and Web 24/7. It qualifies budgets, answers property questions, and syncs directly with your CRM.
                         </p>
@@ -86,7 +86,7 @@ export const ChatbotViz: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
-                                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-500 mt-1"><User className="w-4 h-4" /></div>
+                                <div className="p-2 rounded-lg bg-brand-orange/10 text-brand-orange mt-1"><User className="w-4 h-4" /></div>
                                 <div>
                                     <h4 className="font-bold text-gray-900 dark:text-dark-text-primary mb-1">CRM Sync</h4>
                                     <p className="text-sm text-gray-600 dark:text-dark-text-secondary">Automatically creates contacts in Follow Up Boss or HubSpot.</p>

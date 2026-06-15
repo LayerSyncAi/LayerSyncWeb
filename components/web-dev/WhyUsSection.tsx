@@ -51,7 +51,7 @@ export const WhyUsSection: React.FC<WhyUsSectionProps> = ({ isDarkMode }) => {
                     transition={{ duration: 0.7 }}
                     className="text-center mb-16 md:mb-20"
                 >
-                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-cyan-400/60' : 'text-cyan-600/60'}`}>
+                    <span className={`text-[11px] uppercase tracking-[0.3em] font-medium ${isDarkMode ? 'text-brand-green-light/60' : 'text-brand-green/60'}`}>
                         Why LayerSync AI
                     </span>
                     <h2 className={`hero-heading mt-4 mb-6 text-3xl md:text-5xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
@@ -73,9 +73,9 @@ export const WhyUsSection: React.FC<WhyUsSectionProps> = ({ isDarkMode }) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: '-50px' }}
                             transition={{ duration: 0.5, delay: index * 0.08 }}
-                            className={`glass-card rounded-2xl p-7 group hover:scale-[1.02] ${isDarkMode ? 'hover:border-cyan-500/15' : 'hover:border-cyan-400/20'}`}
+                            className={`glass-card rounded-2xl p-7 group hover:scale-[1.02] ${isDarkMode ? 'hover:border-brand-green/15' : 'hover:border-brand-green-light/20'}`}
                         >
-                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-5 ${isDarkMode ? 'bg-cyan-500/8 text-cyan-400/70' : 'bg-cyan-50 text-cyan-600'}`}>
+                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-5 ${isDarkMode ? 'bg-brand-green/8 text-brand-green-light/70' : 'bg-brand-green-light/10 text-brand-green'}`}>
                                 <item.icon className="w-5 h-5" />
                             </div>
                             <h3 className={`text-base font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>

@@ -50,7 +50,7 @@ const contactMethods = [
     description: "Speak with an AI specialist",
     action: "+263 78 377 1054",
     link: "tel:+263783771054",
-    color: "from-green-500 to-emerald-500",
+    color: "from-brand-green to-brand-green-dark",
   },
   {
     icon: Mail,
@@ -58,7 +58,7 @@ const contactMethods = [
     description: "Get a response within 2 hours",
     action: "hello@layersyncai.com",
     link: "mailto:hello@layersyncai.com",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-brand-orange to-brand-green",
   },
   {
     icon: Calendar,
@@ -66,7 +66,7 @@ const contactMethods = [
     description: "Schedule at your convenience",
     action: "View Available Times",
     link: "#calendar",
-    color: "from-purple-500 to-pink-500",
+    color: "from-brand-orange to-brand-green",
   },
   {
     icon: MessageCircle,
@@ -205,26 +205,26 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden safe-area-bottom"
+      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-brand-orange-dark to-brand-orange-dark relative overflow-hidden safe-area-bottom"
     >
       {/* Enhanced Background Elements - Mobile optimized */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 sm:top-20 left-10 sm:left-20 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 bg-gradient-to-r from-blue-400/8 to-purple-600/8 rounded-full blur-2xl sm:blur-3xl"></div>
-        <div className="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-48 sm:w-64 lg:w-80 h-48 sm:h-64 lg:h-80 bg-gradient-to-r from-purple-400/8 to-pink-600/8 rounded-full blur-2xl sm:blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-gradient-to-r from-cyan-400/4 to-blue-600/4 rounded-full blur-xl sm:blur-2xl"></div>
+        <div className="absolute top-10 sm:top-20 left-10 sm:left-20 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 bg-gradient-to-r from-brand-orange-light/8 to-brand-orange-dark/8 rounded-full blur-2xl sm:blur-3xl"></div>
+        <div className="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-48 sm:w-64 lg:w-80 h-48 sm:h-64 lg:h-80 bg-gradient-to-r from-brand-orange-light/8 to-brand-orange-dark/8 rounded-full blur-2xl sm:blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-gradient-to-r from-brand-green-light/4 to-brand-orange-dark/4 rounded-full blur-xl sm:blur-2xl"></div>
       </div>
 
       <div className="container-responsive relative z-10">
         {/* Section Header - Mobile optimized */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-            <Sparkles className="w-3 sm:w-4 h-3 sm:h-4 mr-1.5 sm:mr-2 text-blue-300" />
+            <Sparkles className="w-3 sm:w-4 h-3 sm:h-4 mr-1.5 sm:mr-2 text-brand-orange-light" />
             Get Your Free AI Strategy Session
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-blue-100/90 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-base sm:text-lg lg:text-xl text-brand-orange-light/90 max-w-4xl mx-auto leading-relaxed font-light">
             Discover automation opportunities in 2-3 minutes and get your personalized AI strategy roadmap.
           </p>
         </div>
@@ -249,7 +249,7 @@ export default function ContactSection() {
                     htmlFor="fullName"
                     className={`absolute left-3 sm:left-4 transition-all duration-200 pointer-events-none text-white/70 ${
                       focusedField === "fullName" || formData.fullName
-                        ? "top-2 text-xs text-blue-300"
+                        ? "top-2 text-xs text-brand-orange-light"
                         : "top-3 sm:top-4 text-sm sm:text-base"
                     }`}
                   >
@@ -275,7 +275,7 @@ export default function ContactSection() {
                     htmlFor="email"
                     className={`absolute left-3 sm:left-4 transition-all duration-200 pointer-events-none text-white/70 ${
                       focusedField === "email" || formData.email
-                        ? "top-2 text-xs text-blue-300"
+                        ? "top-2 text-xs text-brand-orange-light"
                         : "top-3 sm:top-4 text-sm sm:text-base"
                     }`}
                   >
@@ -301,7 +301,7 @@ export default function ContactSection() {
                     htmlFor="company"
                     className={`absolute left-3 sm:left-4 transition-all duration-200 pointer-events-none text-white/70 ${
                       focusedField === "company" || formData.company
-                        ? "top-2 text-xs text-blue-300"
+                        ? "top-2 text-xs text-brand-orange-light"
                         : "top-3 sm:top-4 text-sm sm:text-base"
                     }`}
                   >
@@ -327,7 +327,7 @@ export default function ContactSection() {
                     htmlFor="phone"
                     className={`absolute left-3 sm:left-4 transition-all duration-200 pointer-events-none text-white/70 ${
                       focusedField === "phone" || formData.phone
-                        ? "top-2 text-xs text-blue-300"
+                        ? "top-2 text-xs text-brand-orange-light"
                         : "top-3 sm:top-4 text-sm sm:text-base"
                     }`}
                   >
@@ -418,7 +418,7 @@ export default function ContactSection() {
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-2xl h-12 sm:h-14 text-base sm:text-lg font-bold rounded-xl sm:rounded-2xl border-0 touch-manipulation"
+                  className="w-full bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-orange-dark transition-all duration-300 hover:scale-105 shadow-2xl h-12 sm:h-14 text-base sm:text-lg font-bold rounded-xl sm:rounded-2xl border-0 touch-manipulation"
                 >
                   {isSubmitting ? (
                     <>
@@ -471,11 +471,11 @@ export default function ContactSection() {
                         <IconComponent className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-bold text-white group-hover:text-blue-300 transition-colors text-sm sm:text-base">
+                        <h3 className="font-bold text-white group-hover:text-brand-orange-light transition-colors text-sm sm:text-base">
                           {method.title}
                         </h3>
                         <p className="text-xs sm:text-sm text-white/80 truncate">{method.description}</p>
-                        <p className="text-xs sm:text-sm font-medium text-blue-300 truncate">{method.action}</p>
+                        <p className="text-xs sm:text-sm font-medium text-brand-orange-light truncate">{method.action}</p>
                       </div>
                     </a>
                   )
@@ -493,7 +493,7 @@ export default function ContactSection() {
               </CardHeader>
               <CardContent className="space-y-4 sm:space-y-6 px-4 sm:px-6 pb-6 sm:pb-8">
                 <div className="flex items-start">
-                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 mt-1 shadow-lg flex-shrink-0">
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-brand-orange to-brand-green rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 mt-1 shadow-lg flex-shrink-0">
                     <Clock className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                   </div>
                   <div className="min-w-0">
@@ -506,7 +506,7 @@ export default function ContactSection() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 mt-1 shadow-lg flex-shrink-0">
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-brand-green to-brand-green-dark rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 mt-1 shadow-lg flex-shrink-0">
                     <Users className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                   </div>
                   <div className="min-w-0">
@@ -517,7 +517,7 @@ export default function ContactSection() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 mt-1 shadow-lg flex-shrink-0">
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-brand-orange to-brand-green rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 mt-1 shadow-lg flex-shrink-0">
                     <Award className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                   </div>
                   <div className="min-w-0">
@@ -531,15 +531,15 @@ export default function ContactSection() {
             </Card>
 
             {/* Response Time - Mobile optimized */}
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
+            <div className="bg-gradient-to-r from-brand-orange/20 to-brand-orange-dark/20 backdrop-blur-sm border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
               <div className="flex flex-col sm:flex-row items-start sm:items-center mb-3 sm:mb-4">
-                <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl sm:rounded-2xl flex items-center justify-center mb-2 sm:mb-0 sm:mr-3 shadow-lg flex-shrink-0">
+                <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-xl sm:rounded-2xl flex items-center justify-center mb-2 sm:mb-0 sm:mr-3 shadow-lg flex-shrink-0">
                   <Clock className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <h3 className="font-bold text-white text-base sm:text-lg">Quick Response Guarantee</h3>
               </div>
               <p className="text-white/90 leading-relaxed text-sm sm:text-base">
-                We respond to all inquiries within <strong className="text-blue-300">2 hours</strong> during business
+                We respond to all inquiries within <strong className="text-brand-orange-light">2 hours</strong> during business
                 hours (9 AM - 6 PM EST, Monday - Friday).
               </p>
             </div>

@@ -26,16 +26,16 @@ export default function PricingSection() {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-orange via-brand-amber to-brand-green"></div>
       </div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-brand-orange/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-brand-orange-dark/10 to-transparent rounded-full blur-3xl"></div>
 
       <div className="container-responsive relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
         <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-brand-orange/10 backdrop-blur-sm border border-brand-orange/20 rounded-full text-brand-orange-light text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
               Custom Solutions for Your Business
             </div>
@@ -60,21 +60,21 @@ export default function PricingSection() {
               {/* Benefits Grid */}
               <div className="grid md:grid-cols-3 gap-6 mb-10">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-brand-green to-brand-green-dark rounded-xl flex items-center justify-center mx-auto mb-3">
                     <CheckCircle2 className="w-6 h-6 text-white" />
                     </div>
                   <h3 className="text-white font-semibold mb-2">Free Consultation</h3>
                   <p className="text-white/80 text-sm">No obligation. Just insights.</p>
                       </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-xl flex items-center justify-center mx-auto mb-3">
                     <Building2 className="w-6 h-6 text-white" />
                       </div>
                   <h3 className="text-white font-semibold mb-2">Tailored Solutions</h3>
                   <p className="text-white/80 text-sm">Built for your industry.</p>
                     </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-brand-orange to-brand-green rounded-xl flex items-center justify-center mx-auto mb-3">
                     <Sparkles className="w-6 h-6 text-white" />
                             </div>
                   <h3 className="text-white font-semibold mb-2">Transparent Process</h3>
@@ -105,7 +105,7 @@ export default function PricingSection() {
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start">
-                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                <div className="w-8 h-8 bg-gradient-to-r from-brand-green to-brand-green-dark rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
                   <CheckCircle2 className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -116,7 +116,7 @@ export default function PricingSection() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                <div className="w-8 h-8 bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
                   <CheckCircle2 className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -127,7 +127,7 @@ export default function PricingSection() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                <div className="w-8 h-8 bg-gradient-to-r from-brand-orange to-brand-green rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
                   <CheckCircle2 className="w-5 h-5 text-white" />
                 </div>
                 <div>

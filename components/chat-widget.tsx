@@ -232,7 +232,7 @@ export default function ChatWidget() {
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
         <Button
           onClick={toggleChat}
-          className="w-14 h-14 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-400 hover:to-cyan-400 text-white shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-110"
+          className="w-14 h-14 rounded-full bg-gradient-to-r from-brand-green to-brand-green-dark hover:from-brand-green-light hover:to-brand-green-light text-white shadow-2xl hover:shadow-brand-green/25 transition-all duration-300 hover:scale-110"
         >
           {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
         </Button>
@@ -246,7 +246,7 @@ export default function ChatWidget() {
                 <Button
                   size="sm"
                   onClick={toggleChat}
-                  className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-400 hover:to-cyan-400 text-white text-xs px-3 py-1"
+                  className="bg-gradient-to-r from-brand-green to-brand-green-dark hover:from-brand-green-light hover:to-brand-green-light text-white text-xs px-3 py-1"
                 >
                   Let's chat!
                 </Button>
@@ -260,11 +260,11 @@ export default function ChatWidget() {
         {/* Mobile Greeting Notification */}
         {!isOpen && hasShownGreeting && (
           <div className="absolute -top-16 right-0 animate-fade-in sm:hidden">
-            <div className="bg-gradient-to-r from-green-500 to-cyan-500 text-white p-3 rounded-xl shadow-lg max-w-xs">
+            <div className="bg-gradient-to-r from-brand-green to-brand-green-dark text-white p-3 rounded-xl shadow-lg max-w-xs">
               <p className="text-xs font-medium">Hi 👋 Ask me anything!</p>
             </div>
             {/* Arrow pointing down */}
-            <div className="absolute -bottom-1 right-4 w-2 h-2 bg-gradient-to-r from-green-500 to-cyan-500 transform rotate-45"></div>
+            <div className="absolute -bottom-1 right-4 w-2 h-2 bg-gradient-to-r from-brand-green to-brand-green-dark transform rotate-45"></div>
           </div>
         )}
       </div>
@@ -273,7 +273,7 @@ export default function ChatWidget() {
       {isOpen && (
         <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-80 sm:w-96 h-80 sm:h-96 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col">
           {/* Chat Header */}
-          <CardHeader className="bg-gradient-to-r from-green-500 to-cyan-500 text-white p-4 rounded-t-2xl">
+          <CardHeader className="bg-gradient-to-r from-brand-green to-brand-green-dark text-white p-4 rounded-t-2xl">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <Bot className="w-5 h-5" />
@@ -294,7 +294,7 @@ export default function ChatWidget() {
           <CardContent className="flex-1 p-4 overflow-y-auto space-y-4">
             {messages.length === 0 && (
               <div className="text-center text-gray-300 dark:text-gray-200">
-                <Bot className="w-8 h-8 mx-auto mb-2 text-green-500" />
+                <Bot className="w-8 h-8 mx-auto mb-2 text-brand-green" />
                 <p className="text-sm">Hi! I'm here to help you discover how AI can grow your business. What would you like to know?</p>
               </div>
             )}
@@ -307,7 +307,7 @@ export default function ChatWidget() {
                 <div
                   className={`max-w-xs px-4 py-2 rounded-2xl ${
                     message.type === 'user'
-                      ? 'bg-gradient-to-r from-green-500 to-cyan-500 text-white'
+                      ? 'bg-gradient-to-r from-brand-green to-brand-green-dark text-white'
                       : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'
                   }`}
                 >
@@ -373,7 +373,7 @@ export default function ChatWidget() {
                 onClick={handleSendMessage}
                 disabled={!inputValue.trim()}
                 size="sm"
-                className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-400 hover:to-cyan-400 text-white px-3"
+                className="bg-gradient-to-r from-brand-green to-brand-green-dark hover:from-brand-green-light hover:to-brand-green-light text-white px-3"
               >
                 <Send className="w-4 h-4" />
               </Button>

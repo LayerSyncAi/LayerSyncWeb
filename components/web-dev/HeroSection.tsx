@@ -11,8 +11,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isDarkMode }) => {
         <section className="relative py-20 md:py-32 px-6 overflow-hidden">
             {/* Ambient background glow */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                <div className={`absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[160px] ${isDarkMode ? 'bg-cyan-500/8' : 'bg-cyan-400/10'} ambient-glow`} />
-                <div className={`absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full blur-[120px] ${isDarkMode ? 'bg-purple-500/6' : 'bg-purple-400/8'} ambient-glow`} />
+                <div className={`absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[160px] ${isDarkMode ? 'bg-brand-green/8' : 'bg-brand-green-light/10'} ambient-glow`} />
+                <div className={`absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full blur-[120px] ${isDarkMode ? 'bg-brand-orange/6' : 'bg-brand-orange-light/8'} ambient-glow`} />
             </div>
 
             <div className="relative max-w-5xl mx-auto text-center z-10">

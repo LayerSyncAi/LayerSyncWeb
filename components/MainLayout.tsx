@@ -36,8 +36,8 @@ export const MainLayout: React.FC = () => {
 
             {/* Background Ambience */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-                <div className={`ambient-glow absolute top-[5%] left-[5%] w-[40vw] h-[40vw] blur-[150px] ${isDarkMode ? 'bg-blue-600/10' : 'bg-blue-400/10'}`} />
-                <div className={`ambient-glow absolute bottom-[5%] right-[5%] w-[45vw] h-[45vw] blur-[150px] ${isDarkMode ? 'bg-purple-600/10' : 'bg-purple-400/10'}`} />
+                <div className={`ambient-glow absolute top-[5%] left-[5%] w-[40vw] h-[40vw] blur-[150px] ${isDarkMode ? 'bg-brand-orange/10' : 'bg-brand-orange-light/10'}`} />
+                <div className={`ambient-glow absolute bottom-[5%] right-[5%] w-[45vw] h-[45vw] blur-[150px] ${isDarkMode ? 'bg-brand-green/10' : 'bg-brand-green-light/10'}`} />
             </div>
 
             <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />

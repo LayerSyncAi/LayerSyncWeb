@@ -88,11 +88,11 @@ export default function LeadMagnetSection() {
 
   if (isSubmitted) {
     return (
-      <section className="py-16 bg-gradient-to-r from-green-50 to-blue-50 relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-r from-green-50 to-brand-orange-light relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 left-10 w-32 h-32 border border-green-200 rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-24 h-24 border border-blue-200 rounded-full"></div>
+          <div className="absolute bottom-10 right-10 w-24 h-24 border border-brand-orange-light rounded-full"></div>
         </div>
 
         <div className="container-responsive relative z-10">
@@ -113,7 +113,7 @@ export default function LeadMagnetSection() {
 
               <div className="bg-gray-50 rounded-lg p-4 mb-6">
                 <div className="flex items-center justify-center mb-2">
-                  <FileText className="w-5 h-5 text-blue-600 mr-2" />
+                  <FileText className="w-5 h-5 text-brand-orange mr-2" />
                   <span className="font-semibold text-gray-900">AI Automation Checklist</span>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -123,7 +123,7 @@ export default function LeadMagnetSection() {
 
               <Button
                 onClick={handleDownload}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 font-semibold transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-orange-dark text-white px-8 py-3 font-semibold transition-all duration-300 hover:scale-105"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download PDF Now
@@ -140,17 +140,17 @@ export default function LeadMagnetSection() {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-brand-orange-light to-brand-orange-light relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 w-32 h-32 border border-blue-200 rounded-full"></div>
-        <div className="absolute bottom-10 right-10 w-24 h-24 border border-purple-200 rounded-full"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-blue-100 rotate-45 rounded-lg"></div>
+        <div className="absolute top-10 left-10 w-32 h-32 border border-brand-orange-light rounded-full"></div>
+        <div className="absolute bottom-10 right-10 w-24 h-24 border border-brand-orange-light rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-brand-orange-light rotate-45 rounded-lg"></div>
       </div>
 
       <div className="container-responsive relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center px-4 py-2 bg-brand-orange-light/20 text-brand-orange-dark rounded-full text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4 mr-2" />
             Free Resource
           </div>
@@ -169,7 +169,7 @@ export default function LeadMagnetSection() {
             <CardContent className="p-8 sm:p-12">
               {/* PDF Preview */}
               <div className="text-center mb-8">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-xl flex items-center justify-center mx-auto mb-4">
                   <FileText className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">AI Automation Checklist</h3>
@@ -225,7 +225,7 @@ export default function LeadMagnetSection() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full h-14 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full h-14 bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-orange-dark text-white text-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
@@ -279,7 +279,7 @@ export default function LeadMagnetSection() {
                 element.scrollIntoView({ behavior: 'smooth' })
               }
             }}
-            className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-3 font-semibold transition-all duration-300 hover:scale-105"
+            className="bg-gradient-to-r from-brand-green to-brand-orange hover:from-brand-green-dark hover:to-brand-orange-dark text-white px-8 py-3 font-semibold transition-all duration-300 hover:scale-105"
           >
             Book Free Strategy Session
             <ArrowRight className="w-4 h-4 ml-2" />

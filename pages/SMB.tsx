@@ -17,7 +17,7 @@ export const SMB: React.FC = () => {
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                     <h1 className="hero-heading mb-6 md:mb-8 text-gray-900 dark:text-dark-text-primary text-4xl md:text-7xl">
                         Smarter Business <br />
-                        <span className="text-blue-600 dark:text-blue-500">*Automation*</span>
+                        <span className="text-brand-orange dark:text-brand-orange">*Automation*</span>
                     </h1>
                     <p className="sub-heading text-gray-600 dark:text-dark-text-secondary mb-8 md:mb-10 text-sm md:text-xl">
                         LayerSync identifies repetitive tasks in your workflow and builds custom AI agents to handle them.
@@ -39,7 +39,7 @@ export const SMB: React.FC = () => {
                         { title: "Rapid Deployment", desc: "Most custom workflows are live within 48 hours of our audit." }
                     ].map((f, i) => (
                         <div key={i} className={`p-8 rounded-[32px] border transition-colors shadow-sm ${safeDarkMode ? 'border-white/5 bg-white/5 hover:bg-white/10 shadow-none' : 'border-black/5 bg-white hover:border-black/10'}`}>
-                            <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 mb-6">
+                            <div className="w-10 h-10 rounded-full bg-brand-orange/20 flex items-center justify-center text-brand-orange-light mb-6">
                                 <Check className="w-5 h-5" />
                             </div>
                             <h3 className={`text-xl font-bold mb-4 ${safeDarkMode ? 'text-dark-text-primary' : 'text-gray-900'}`}>{f.title}</h3>

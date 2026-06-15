@@ -10,7 +10,7 @@ export const TechStack: React.FC = () => {
                 <h6 className="text-center text-xs uppercase tracking-[0.4em] font-bold text-gray-500 dark:text-dark-text-tertiary mb-8">Our Technology Stack</h6>
                 <div className="flex flex-wrap justify-center gap-4">
                     {stack.map((tech, i) => (
-                        <span key={i} className="px-6 py-2 rounded-full border border-black/5 dark:border-white/5 bg-black/5 dark:bg-white/5 text-gray-700 dark:text-dark-text-secondary text-sm font-mono hover:border-cyan-500/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors cursor-default">
+                        <span key={i} className="px-6 py-2 rounded-full border border-black/5 dark:border-white/5 bg-black/5 dark:bg-white/5 text-gray-700 dark:text-dark-text-secondary text-sm font-mono hover:border-brand-green/50 hover:text-brand-green dark:hover:text-brand-green-light transition-colors cursor-default">
                             {tech}
                         </span>
                     ))}
