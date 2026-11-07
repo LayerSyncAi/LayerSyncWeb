@@ -2,13 +2,15 @@ import React from 'react';
 import { ROICalculator } from '../components/smb/Calculator';
 import { WorkflowViz } from '../components/smb/WorkflowViz';
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
+import { useContact } from '../components/contact/ContactProvider';
 
 import { useOutletContext } from 'react-router-dom';
 
 export const SMB: React.FC = () => {
     const { isDarkMode } = useOutletContext<{ isDarkMode: boolean }>();
     const safeDarkMode = isDarkMode ?? true;
+    const { openContact } = useContact();
 
     return (
         <div className={`min-h-screen pb-20 pt-24 md:pt-32 overflow-x-hidden transition-colors duration-700 ${safeDarkMode ? 'bg-[#050505]' : 'bg-[#f5f5f7]'}`}>
@@ -47,6 +49,23 @@ export const SMB: React.FC = () => {
                         </div>
                     ))}
                 </div>
+            </section>
+
+            {/* Closing CTA */}
+            <section className="px-4 md:px-6 max-w-4xl mx-auto text-center pt-10">
+                <h2 className={`hero-heading mb-6 text-3xl md:text-5xl ${safeDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                    Find the hours you're losing.
+                </h2>
+                <p className={`sub-heading max-w-xl mx-auto mb-10 ${safeDarkMode ? 'text-white/60' : 'text-gray-600'}`}>
+                    Tell us how your team works and we'll map what can be automated. Leave your number and we'll pick it up on WhatsApp.
+                </p>
+                <button
+                    type="button"
+                    onClick={() => openContact({ interest: 'automating my business', cta: 'smb-final' })}
+                    className={`btn-glow px-10 py-5 rounded-full font-bold uppercase tracking-[0.2em] text-xs inline-flex items-center gap-3 ${safeDarkMode ? 'bg-white text-black' : 'bg-black text-white'}`}
+                >
+                    Get in touch <ArrowRight className="w-4 h-4" />
+                </button>
             </section>
         </div>
     );

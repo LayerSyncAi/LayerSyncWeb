@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Phone, Sparkles } from 'lucide-react';
+import { Check, Sparkles } from 'lucide-react';
+import { useContact, WhatsAppGlyph } from '../contact/ContactProvider';
 
 interface PricingProps {
     isDarkMode: boolean;
 }
 
 export const Pricing: React.FC<PricingProps> = ({ isDarkMode }) => {
+    const { openContact } = useContact();
     // const borderSubtle = isDarkMode ? "border-white/5" : "border-black/5"; // Removed manual check
 
     const packages = [
@@ -97,11 +99,14 @@ export const Pricing: React.FC<PricingProps> = ({ isDarkMode }) => {
                             ))}
                         </div>
 
-                        <button className={`w-full py-4 md:py-5 rounded-full font-bold uppercase tracking-widest text-[10px] md:text-[11px] btn-glow flex items-center justify-center gap-3 ${p.popular
+                        <button
+                            type="button"
+                            onClick={() => openContact({ interest: `the ${p.name}`, cta: `pricing-${i + 1}` })}
+                            className={`w-full py-4 md:py-5 rounded-full font-bold uppercase tracking-widest text-[10px] md:text-[11px] btn-glow flex items-center justify-center gap-3 ${p.popular
                             ? 'bg-black text-white dark:bg-white dark:text-black'
                             : `border border-black/5 dark:border-white/5 hover:bg-black/5 dark:hover:bg-white/5 text-gray-900 dark:text-dark-text-primary`
                             }`}>
-                            <Phone className="w-4 h-4" /> Book a Call
+                            <WhatsAppGlyph className="w-4 h-4" /> Get in touch
                         </button>
                     </motion.div>
                 ))}

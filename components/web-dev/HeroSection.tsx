@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { useContact } from '../contact/ContactProvider';
 
 interface HeroSectionProps {
     isDarkMode: boolean;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ isDarkMode }) => {
+    const { openContact } = useContact();
     return (
         <section className="relative py-20 md:py-32 px-6 overflow-hidden">
             {/* Ambient background glow */}
@@ -59,13 +61,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ isDarkMode }) => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <a
-                        href="#contact"
+                    <button
+                        type="button"
+                        onClick={() => openContact({ interest: 'a website audit', cta: 'webdev-hero' })}
                         className="btn-glow px-8 py-4 rounded-full bg-white text-black font-semibold text-sm tracking-wide flex items-center gap-3 hover:bg-gray-100 transition-all dark:bg-white dark:text-black"
                     >
                         Request a Website Audit
                         <ArrowRight className="w-4 h-4" />
-                    </a>
+                    </button>
                     <a
                         href="#process"
                         className={`px-8 py-4 rounded-full font-medium text-sm tracking-wide border transition-all ${isDarkMode ? 'border-white/10 text-white/70 hover:border-white/25 hover:text-white' : 'border-black/10 text-black/60 hover:border-black/25 hover:text-black'}`}

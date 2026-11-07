@@ -48,8 +48,8 @@ const contactMethods = [
     icon: Phone,
     title: "Call Us Directly",
     description: "Speak with an AI specialist",
-    action: "+263 78 377 1054",
-    link: "tel:+263783771054",
+    action: "+263 77 518 7682",
+    link: "tel:+263775187682",
     color: "from-brand-green to-brand-green-dark",
   },
   {

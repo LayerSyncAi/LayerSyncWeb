@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useContact } from '../contact/ContactProvider';
 
 interface FinalCTASectionProps {
     isDarkMode: boolean;
 }
 
 export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ isDarkMode }) => {
+    const { openContact } = useContact();
     return (
         <section id="contact" className="relative py-28 md:py-40 px-6 overflow-hidden">
             {/* Background ambient glow */}
@@ -40,19 +42,21 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ isDarkMode }) 
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a
-                            href="#get-started"
+                        <button
+                            type="button"
+                            onClick={() => openContact({ interest: 'a free website consultation', cta: 'webdev-final' })}
                             className="btn-glow px-10 py-5 rounded-full bg-white text-black font-semibold text-sm tracking-wide flex items-center gap-3 hover:bg-gray-100 transition-all dark:bg-white dark:text-black"
                         >
                             Book a Free Consultation
                             <ArrowRight className="w-4 h-4" />
-                        </a>
-                        <a
-                            href="#audit"
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => openContact({ interest: 'a website audit', cta: 'webdev-final-audit' })}
                             className={`px-10 py-5 rounded-full font-medium text-sm tracking-wide border transition-all ${isDarkMode ? 'border-white/10 text-white/70 hover:border-white/25 hover:text-white' : 'border-black/10 text-black/60 hover:border-black/25 hover:text-black'}`}
                         >
                             Request a Website Audit
-                        </a>
+                        </button>
                     </div>
 
                     <motion.p

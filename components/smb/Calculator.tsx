@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useContact } from '../contact/ContactProvider';
 
 export const ROICalculator: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
+    const { openContact } = useContact();
     const [employees, setEmployees] = useState(5);
     const [hoursSaved, setHoursSaved] = useState(10); // per employee per week
     const [hourlyRate, setHourlyRate] = useState(25);
@@ -79,7 +81,10 @@ export const ROICalculator: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode })
                             That's <span className={`font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{format(weeklySavings)}</span> lost every single week to manual tasks.
                         </p>
 
-                        <button className="mt-8 md:mt-12 mx-auto btn-glow px-6 md:px-8 py-3 rounded-full bg-brand-orange text-white font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-brand-orange-light transition-colors shadow-lg shadow-brand-orange-dark/40">
+                        <button
+                            type="button"
+                            onClick={() => openContact({ interest: 'automating my business', cta: 'smb-calculator' })}
+                            className="mt-8 md:mt-12 mx-auto btn-glow px-6 md:px-8 py-3 rounded-full bg-brand-orange text-white font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-brand-orange-light transition-colors shadow-lg shadow-brand-orange-dark/40">
                             Reclaim This Value
                         </button>
                     </div>

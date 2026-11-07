@@ -3,6 +3,7 @@ import { useScroll, motion, useTransform } from 'framer-motion';
 import { useOutletContext, Link } from 'react-router-dom';
 import { ScrollCanvas } from '../components/ScrollCanvas';
 import { TextBeat } from '../components/TextBeat';
+import { useContact } from '../components/contact/ContactProvider';
 
 // Lazy Load Heavy Components
 const Pricing = lazy(() => import('../components/home/Pricing').then(module => ({ default: module.Pricing })));
@@ -21,6 +22,7 @@ import {
 export const Home: React.FC = () => {
     const { isDarkMode } = useOutletContext<{ isDarkMode: boolean }>();
     const scrollytellingRef = useRef<HTMLDivElement>(null);
+    const { openContact } = useContact();
 
     const safeDarkMode = isDarkMode ?? true;
     // const borderSubtle = safeDarkMode ? "border-white/5" : "border-black/5"; // Removed manual check
@@ -34,17 +36,17 @@ export const Home: React.FC = () => {
 
     const solutions = [
         {
-            title: "Real Estate AI",
-            subtitle: "Virtual Staging • Lead Qualification • CRM Sync",
-            desc: "Transform empty listings into furnished dream homes. Qualify leads 24/7 on WhatsApp. Close faster.",
-            href: "/solutions/real-estate",
+            title: "SyncEstate",
+            subtitle: "Leads • Lettings • Valuations • Trust Accounts • Developments",
+            desc: "Run your whole estate agency from your pocket. Seven modules on one login, built in Zimbabwe for how Zimbabwe does property.",
+            href: "/solutions/sync-estate",
             gradient: "from-brand-orange to-brand-amber",
             glowColor: "orange",
             icon: <Building2 className="w-7 h-7" />,
             stats: [
-                { value: "98%", label: "Cost Reduction" },
-                { value: "40%", label: "Faster Sales" },
-                { value: "24/7", label: "Lead Capture" }
+                { value: "7", label: "Modules" },
+                { value: "1", label: "Login" },
+                { value: "USD+ZiG", label: "Never Mixed" }
             ]
         },
         {
@@ -330,7 +332,11 @@ export const Home: React.FC = () => {
                         <div className="relative z-10">
                             <h3 className="hero-heading mb-8 md:mb-16 text-shimmer leading-[1.1]">Ready to *Sync*?</h3>
                             <p className="sub-heading mb-12 md:mb-20 max-w-3xl mx-auto">We are accepting a limited number of partners for our early program. Secure your free AI audit today.</p>
-                            <button className={`btn-glow px-10 md:px-16 py-5 md:py-6 rounded-full md:rounded-[24px] font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] text-xs md:text-sm shadow-2xl inline-flex items-center gap-4 bg-black text-white dark:bg-white dark:text-black`}>
+                            <button
+                                type="button"
+                                onClick={() => openContact({ interest: 'a free AI audit', cta: 'home-final' })}
+                                className={`btn-glow px-10 md:px-16 py-5 md:py-6 rounded-full md:rounded-[24px] font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] text-xs md:text-sm shadow-2xl inline-flex items-center gap-4 ${safeDarkMode ? 'bg-white text-black' : 'bg-black text-white'}`}
+                            >
                                 Request AI Audit <ArrowRight className="w-5 h-5" />
                             </button>
                             <p className="mt-10 md:mt-12 text-[10px] uppercase tracking-widest text-gray-400 dark:text-dark-text-tertiary font-bold">Limited Onboarding Slots Available</p>
