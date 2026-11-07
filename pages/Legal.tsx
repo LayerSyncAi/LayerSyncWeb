@@ -87,7 +87,7 @@ export const Privacy: React.FC = () => {
       <H2>Who we are</H2>
       <P>
         {COMPANY} ("LayerSync", "we") is a software company registered in Zimbabwe and based in
-        Harare. We build custom operations software, including SynCRM. For anything in this policy,
+        Harare. We build custom operations software, including SyncEstate. For anything in this policy,
         contact us at <a href={`mailto:${EMAIL}`} className="text-brand-orange underline">{EMAIL}</a>.
       </P>
       <P>
@@ -96,16 +96,18 @@ export const Privacy: React.FC = () => {
 
       <H2>What we collect</H2>
       <P>
-        We collect only what you type into our diagnostic form. There is no account system, no
-        newsletter sign-up, and no tracking pixel on this site. Specifically:
+        We collect only what you type into our two forms: the short <strong>Get in touch</strong>{' '}
+        form (your name and phone number) and the longer diagnostic form. There is no account
+        system, no newsletter sign-up, and no tracking pixel on this site. Specifically:
       </P>
       <UL
         items={[
           <><strong>Your name</strong> — so we know who we're talking to.</>,
           <><strong>Your business and role</strong> — so we can prepare properly for the conversation.</>,
           <><strong>Your email address</strong> — so we can reply.</>,
-          <><strong>Your WhatsApp number</strong> — optional, only if you'd prefer we reach you there.</>,
+          <><strong>Your phone or WhatsApp number</strong> — required on the Get in touch form, optional on the diagnostic form, so we can reply on WhatsApp or call you.</>,
           <><strong>What you tell us about your operation</strong> — the free-text description of what's breaking.</>,
+          <><strong>What you asked about</strong> — which button you pressed (for example SyncEstate), so we know the context.</>,
         ]}
       />
       <P>
@@ -144,6 +146,10 @@ export const Privacy: React.FC = () => {
         run the site and store enquiries — our web host and our database provider — who process the
         data on our instructions only. We do not share it with anyone else, and we do not disclose
         it to third parties for their own purposes.
+      </P>
+      <P>
+        When you use Get in touch, your browser then opens WhatsApp with a message to us. That
+        conversation happens on WhatsApp and is covered by WhatsApp's own terms and privacy policy.
       </P>
 
       <H2>How long we keep it</H2>
@@ -236,7 +242,7 @@ export const Terms: React.FC = () => {
 
       <H2>Our content</H2>
       <P>
-        The content of this site — text, design, code, graphics and the LayerSync and SynCRM names
+        The content of this site — text, design, code, graphics and the LayerSync, SyncEstate and SynCRM names
         and marks — belongs to us. You're welcome to read it, quote it with attribution, and share
         links to it. Please don't republish it as your own or use our branding to represent your own
         business.

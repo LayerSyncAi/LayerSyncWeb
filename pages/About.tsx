@@ -37,7 +37,7 @@ const people: Person[] = [
     accent: 'orange',
     bio: [
       'Kevin sets product and technical direction, and architects the systems the company builds — data models, multi-tenant platforms and AI systems, end to end.',
-      'He has a track record of shipped, live products, including KurimaSense (institutional agricultural-risk intelligence) and SynCRM (a real-estate system of record). His background spans systems engineering, product and strategy.',
+      'He has a track record of shipped, live products, including KurimaSense (institutional agricultural-risk intelligence) and SyncEstate (an operating system for estate agencies). His background spans systems engineering, product and strategy.',
     ],
     atLayerSync:
       'Kevin owns the vision and the technical foundation — the architecture underneath every platform we ship.',

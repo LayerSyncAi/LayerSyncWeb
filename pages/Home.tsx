@@ -57,8 +57,8 @@ export const Home: React.FC = () => {
                     />
 
                     <TextBeat
-                        title="Our flagship is *SynCRM.*"
-                        subtitle="The operating system for real estate agencies — every lead, agent, and deal in one place, so you can finally see your whole pipeline instead of guessing."
+                        title="Our flagship is *SyncEstate.*"
+                        subtitle="The operating system for estate agencies — leads, lettings, valuations, trust accounts and developments on one login, in the palm of your hand."
                         scrollYProgress={localScrollYProgress}
                         range={[0.26, 0.55]}
                     />
@@ -136,7 +136,7 @@ export const Home: React.FC = () => {
                 {/* ===== SYNCRM FLAGSHIP TEASER ===== */}
                 <section className="relative py-10 md:py-20 px-4 md:px-6">
                     <div className="max-w-7xl mx-auto">
-                        <Link to="/syncrm" className="block group">
+                        <Link to="/sync-estate" className="block group">
                             <motion.div
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -150,9 +150,9 @@ export const Home: React.FC = () => {
                                     </div>
                                     <div className="flex-1">
                                         <div className="text-[10px] uppercase tracking-[0.3em] text-brand-orange font-bold mb-3">Flagship product</div>
-                                        <h3 className="text-3xl md:text-5xl font-light mb-4 text-gray-900 dark:text-dark-text-primary group-hover:text-shimmer transition-all">SynCRM</h3>
+                                        <h3 className="text-3xl md:text-5xl font-light mb-4 text-gray-900 dark:text-dark-text-primary group-hover:text-shimmer transition-all">SyncEstate</h3>
                                         <p className="text-gray-600 dark:text-dark-text-secondary text-sm md:text-lg leading-relaxed max-w-2xl">
-                                            The operating system for real estate agencies. Stop running blind — every lead, agent, and deal in one place, so you can see your whole pipeline.
+                                            The operating system for estate agencies. Seven modules on one login, from SynCRM for leads to SyncStay for lettings and SyncFinance for trust money. Watch the two-minute tour.
                                         </p>
                                     </div>
                                     <div className="hidden lg:flex w-14 h-14 rounded-full border border-black/10 dark:border-white/10 items-center justify-center group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all duration-300 flex-shrink-0">
@@ -258,7 +258,7 @@ export const Home: React.FC = () => {
                         <SectionHeader
                             align="center"
                             title={<>Software we've actually <span className="italic font-extralight text-gray-400 dark:text-dark-text-secondary">shipped.</span></>}
-                            sub="SynCRM is live and running today. This is the real dashboard, not a mockup."
+                            sub="SyncEstate is live and running today. This is the real SynCRM dashboard, not a mockup."
                             className="mb-14"
                         />
                         <motion.div
@@ -267,7 +267,7 @@ export const Home: React.FC = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                         >
-                            <Link to="/syncrm" className="block group">
+                            <Link to="/sync-estate" className="block group">
                                 <div className="rounded-[24px] md:rounded-[32px] overflow-hidden border border-black/10 dark:border-white/10 shadow-2xl relative">
                                     <img
                                         src="/syncrm-dashboard.webp"
@@ -284,7 +284,7 @@ export const Home: React.FC = () => {
                                             <h3 className="text-lg md:text-2xl font-light text-white">SynCRM — pipeline dashboard</h3>
                                         </div>
                                         <span className="hidden sm:inline-flex text-[11px] uppercase tracking-[0.2em] font-bold text-white items-center gap-2 whitespace-nowrap">
-                                            Explore SynCRM <ArrowRight className="w-4 h-4 cta-arrow" />
+                                            Explore SyncEstate <ArrowRight className="w-4 h-4 cta-arrow" />
                                         </span>
                                     </div>
                                 </div>
@@ -316,7 +316,7 @@ export const Home: React.FC = () => {
                             <p className="sub-heading mb-12 max-w-2xl mx-auto">Tell us where your operation is losing time or deals. We'll tell you — honestly — whether a system can fix it, and what we'd build.</p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <CTAButton />
-                                <GhostLink to="/syncrm" label="In real estate? See SynCRM" />
+                                <GhostLink to="/sync-estate" label="In real estate? See SyncEstate" />
                             </div>
                             <p className="mt-10 text-[10px] uppercase tracking-widest text-gray-400 dark:text-dark-text-tertiary font-bold">No commitment · We reply within one business day</p>
                         </div>

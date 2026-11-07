@@ -1,12 +1,15 @@
 import React from 'react';
 import { Logo } from './Logo';
 import { Link } from 'react-router-dom';
+import { useContact } from './contact/ContactProvider';
+import { PHONE_DISPLAY, PHONE_E164 } from '../lib/contact';
 
 interface FooterProps {
   isDarkMode: boolean;
 }
 
 export const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
+  const { openContact } = useContact();
   return (
     <footer className={`relative py-16 border-t border-black/5 dark:border-white/5 z-20 ${isDarkMode ? 'bg-[#050505]' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-6">
@@ -15,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">Product</h4>
             <ul className="space-y-4">
-              <li><Link to="/syncrm" className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">SynCRM</Link></li>
+              <li><Link to="/sync-estate" className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">SyncEstate</Link></li>
               <li><Link to="/solutions/real-estate" className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">Real Estate</Link></li>
             </ul>
           </div>
@@ -40,9 +43,10 @@ export const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">Contact</h4>
             <ul className="space-y-4">
+              <li><button type="button" onClick={() => openContact({ cta: 'footer' })} className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">WhatsApp us</button></li>
               <li><Link to="/contact" className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">Book a diagnostic</Link></li>
               <li><a href="mailto:support@layersyncai.com" className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">support@layersyncai.com</a></li>
-              <li><a href="tel:+263783771054" className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">+263 78 377 1054</a></li>
+              <li><a href={`tel:${PHONE_E164}`} className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">{PHONE_DISPLAY}</a></li>
               <li><span className="text-sm text-gray-600 dark:text-gray-400">Harare, Zimbabwe</span></li>
             </ul>
           </div>

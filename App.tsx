@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { MainLayout } from './components/MainLayout';
 import { Home } from './pages/Home';
-import { SynCRM } from './pages/SynCRM';
+import { SyncEstate } from './pages/SyncEstate';
 import { WhatWeBuild } from './pages/WhatWeBuild';
 import { Work } from './pages/Work';
 import { About } from './pages/About';
@@ -20,7 +20,9 @@ const App: React.FC = () => {
         <Route index element={<Home />} />
 
         {/* New IA */}
-        <Route path="syncrm" element={<SynCRM />} />
+        <Route path="sync-estate" element={<SyncEstate />} />
+        {/* SynCRM is now one module of SyncEstate; keep old links working. */}
+        <Route path="syncrm" element={<Navigate to="/sync-estate" replace />} />
         <Route path="what-we-build" element={<WhatWeBuild />} />
         <Route path="work" element={<Work />} />
         <Route path="about" element={<About />} />
@@ -33,7 +35,7 @@ const App: React.FC = () => {
         <Route path="privacy" element={<Privacy />} />
         <Route path="terms" element={<Terms />} />
 
-        {/* Standalone real-estate services page (links to SynCRM) */}
+        {/* Standalone real-estate services page (links to SyncEstate) */}
         <Route path="solutions/real-estate" element={<RealEstate />} />
 
         {/* Web Dev keeps its own page (active revenue line) */}

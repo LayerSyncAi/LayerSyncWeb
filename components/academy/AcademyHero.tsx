@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useOutletContext, Link } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 import { ArrowRight, GraduationCap } from 'lucide-react';
+import { useContact } from '../contact/ContactProvider';
 
 export const AcademyHero: React.FC = () => {
+    const { openContact } = useContact();
     const { isDarkMode } = useOutletContext<{ isDarkMode: boolean }>();
     const safeDarkMode = isDarkMode ?? true;
 
@@ -36,9 +38,9 @@ export const AcademyHero: React.FC = () => {
                     </p>
 
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mb-12 md:mb-16">
-                        <Link to="/contact" className="btn-glow px-8 md:px-12 py-4 md:py-5 rounded-full md:rounded-[24px] font-bold uppercase tracking-[0.15em] text-xs bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-2xl shadow-indigo-900/30 inline-flex items-center gap-3 cursor-pointer hover:shadow-indigo-900/50 transition-shadow">
+                        <button type="button" onClick={() => openContact({ interest: 'AI training for my team', cta: 'academy-hero' })} className="btn-glow px-8 md:px-12 py-4 md:py-5 rounded-full md:rounded-[24px] font-bold uppercase tracking-[0.15em] text-xs bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-2xl shadow-indigo-900/30 inline-flex items-center gap-3 cursor-pointer hover:shadow-indigo-900/50 transition-shadow">
                             Book a diagnostic <ArrowRight className="w-4 h-4" />
-                        </Link>
+                        </button>
                     </motion.div>
 
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}

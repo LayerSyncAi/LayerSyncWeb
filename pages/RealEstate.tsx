@@ -10,8 +10,8 @@ import { CTAButton, GhostLink, Eyebrow, SectionHeader } from '../components/site
 
 /**
  * Real Estate — standalone services page. The product narrative lives on
- * /syncrm; this page covers the real-estate-specific services (staging,
- * listing copy, integrations) and points to SynCRM as the system underneath.
+ * /sync-estate; this page covers the real-estate-specific services (staging,
+ * listing copy, integrations) and points to SyncEstate as the system underneath.
  */
 export const RealEstate: React.FC = () => {
     const { isDarkMode } = useOutletContext<{ isDarkMode: boolean }>();
@@ -29,12 +29,12 @@ export const RealEstate: React.FC = () => {
                     </h1>
                     <p className="sub-heading max-w-2xl mx-auto mb-12">
                         Virtual staging, listing copy, and the integrations that keep your tools talking
-                        — built around <Link to="/syncrm" className="underline hover:text-brand-orange">SynCRM</Link>, the operating
-                        system that gives you a clear view of your whole pipeline.
+                        — built around <Link to="/sync-estate" className="underline hover:text-brand-orange">SyncEstate</Link>, the operating
+                        system that runs your whole agency from one login.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <CTAButton label="Book a brokerage diagnostic" />
-                        <GhostLink to="/syncrm" label="See SynCRM" />
+                        <CTAButton label="Book a brokerage diagnostic" interest="a brokerage diagnostic" cta="real-estate-hero" />
+                        <GhostLink to="/sync-estate" label="See SyncEstate" />
                     </div>
                 </div>
             </section>
@@ -51,9 +51,9 @@ export const RealEstate: React.FC = () => {
 
                 <IntegrationMap />
 
-                {/* ===== SYNCRM CROSS-LINK ===== */}
+                {/* ===== SYNCESTATE CROSS-LINK ===== */}
                 <section className="relative py-10 md:py-20 px-4 md:px-6 max-w-7xl mx-auto">
-                    <Link to="/syncrm" className="block group">
+                    <Link to="/sync-estate" className="block group">
                         <motion.div
                             initial={{ opacity: 0, y: 24 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -67,9 +67,9 @@ export const RealEstate: React.FC = () => {
                                 </div>
                                 <div className="flex-1">
                                     <div className="text-[10px] uppercase tracking-[0.3em] text-brand-orange font-bold mb-3">The system underneath</div>
-                                    <h3 className="text-2xl md:text-4xl font-light mb-4 text-gray-900 dark:text-dark-text-primary group-hover:text-shimmer transition-all">Meet SynCRM</h3>
+                                    <h3 className="text-2xl md:text-4xl font-light mb-4 text-gray-900 dark:text-dark-text-primary group-hover:text-shimmer transition-all">Meet SyncEstate</h3>
                                     <p className="text-gray-600 dark:text-dark-text-secondary text-sm md:text-base leading-relaxed max-w-2xl">
-                                        Every lead, agent, and deal in one place — so you stop running blind and finally see your whole pipeline. Marketing tools are great; a system that captures and converts is better.
+                                        Leads, lettings, valuations, trust accounts and developments on one login, so you stop running blind and see your whole agency. Marketing tools are great; a system that captures and converts is better.
                                     </p>
                                 </div>
                                 <div className="hidden lg:flex w-14 h-14 rounded-full border border-black/10 dark:border-white/10 items-center justify-center group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all duration-300 flex-shrink-0">
@@ -85,10 +85,10 @@ export const RealEstate: React.FC = () => {
                     <SectionHeader
                         align="center"
                         title={<>The system behind the <span className="italic font-extralight text-gray-400 dark:text-dark-text-secondary">marketing.</span></>}
-                        sub="Staging and listing copy win attention. SynCRM is what makes sure the enquiry actually gets worked — here it is running."
+                        sub="Staging and listing copy win attention. SyncEstate is what makes sure the enquiry actually gets worked — here is its SynCRM module running."
                         className="mb-14"
                     />
-                    <Link to="/syncrm" className="block group">
+                    <Link to="/sync-estate" className="block group">
                         <motion.div
                             initial={{ opacity: 0, y: 28 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -111,7 +111,7 @@ export const RealEstate: React.FC = () => {
                                     <h3 className="text-lg md:text-2xl font-light text-white">Agent performance, per agent</h3>
                                 </div>
                                 <span className="hidden sm:inline-flex text-[11px] uppercase tracking-[0.2em] font-bold text-white items-center gap-2 whitespace-nowrap">
-                                    See SynCRM <ArrowRight className="w-4 h-4 cta-arrow" />
+                                    See SyncEstate <ArrowRight className="w-4 h-4 cta-arrow" />
                                 </span>
                             </div>
                         </motion.div>
@@ -127,7 +127,7 @@ export const RealEstate: React.FC = () => {
                             <p className="sub-heading mb-12 max-w-2xl mx-auto">
                                 We start with a short diagnostic of how leads move through your agency today — and show you exactly where they're slipping. No packages, no pressure.
                             </p>
-                            <CTAButton label="Book a brokerage diagnostic" />
+                            <CTAButton label="Book a brokerage diagnostic" interest="a brokerage diagnostic" cta="real-estate-final" />
                         </div>
                     </div>
                 </section>

@@ -5,6 +5,8 @@ import { Send, Check, Loader2, Calendar, Compass, Hammer, KeyRound } from 'lucid
 import { Eyebrow } from '../components/site/Primitives';
 import { FloatingOrbs, Reveal } from '../components/site/Backgrounds';
 import { submitDiagnostic, type DiagnosticRequest, type SubmitResult } from '../lib/submitDiagnostic';
+import { useContact, WhatsAppGlyph } from '../components/contact/ContactProvider';
+import { PHONE_DISPLAY, PHONE_E164 } from '../lib/contact';
 
 /**
  * Contact — "Book a diagnostic". Split personality: the pitch + what-to-expect
@@ -15,6 +17,7 @@ import { submitDiagnostic, type DiagnosticRequest, type SubmitResult } from '../
 export const Contact: React.FC = () => {
   const { isDarkMode } = useOutletContext<{ isDarkMode: boolean }>();
   const dark = isDarkMode ?? true;
+  const { openContact } = useContact();
 
   const [form, setForm] = useState<DiagnosticRequest>({
     name: '', business: '', role: '', email: '', whatsapp: '', blindSpot: '',
@@ -75,6 +78,24 @@ export const Contact: React.FC = () => {
                 </Reveal>
               ))}
             </div>
+
+            {/* Quicker route: name and number, then straight to WhatsApp */}
+            <Reveal delay={0.4}>
+              <div className="mt-12 glass-card rounded-[28px] p-6 md:p-7 border border-black/5 dark:border-white/10">
+                <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-gray-400 dark:text-dark-text-tertiary mb-2">Rather just chat?</div>
+                <p className="text-sm text-gray-600 dark:text-dark-text-secondary leading-relaxed mb-5">
+                  Leave your name and number and we&apos;ll pick it up with you on WhatsApp, or call us on{' '}
+                  <a href={`tel:${PHONE_E164}`} className="underline underline-offset-2 hover:text-brand-orange">{PHONE_DISPLAY}</a>.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => openContact({ interest: 'a diagnostic', cta: 'contact-page' })}
+                  className="btn-glow px-7 py-3.5 rounded-full font-bold uppercase tracking-[0.18em] text-[11px] inline-flex items-center gap-2.5 bg-brand-green text-[#0b1408] hover:brightness-110"
+                >
+                  <WhatsAppGlyph className="w-4 h-4" /> Chat on WhatsApp
+                </button>
+              </div>
+            </Reveal>
           </div>
 
           {/* Right — form */}

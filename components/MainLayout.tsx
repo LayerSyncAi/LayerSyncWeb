@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { PageMeta } from './site/PageMeta';
+import { ContactProvider } from './contact/ContactProvider';
 
 export const MainLayout: React.FC = () => {
     // Initialize with localStorage or default to true
@@ -43,11 +44,13 @@ export const MainLayout: React.FC = () => {
                 <div className={`ambient-glow absolute bottom-[5%] right-[5%] w-[45vw] h-[45vw] blur-[150px] ${isDarkMode ? 'bg-purple-600/10' : 'bg-purple-400/10'}`} />
             </div>
 
-            <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+            <ContactProvider isDarkMode={isDarkMode}>
+                <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 
-            <Outlet context={{ isDarkMode, setIsDarkMode }} />
+                <Outlet context={{ isDarkMode, setIsDarkMode }} />
 
-            <Footer isDarkMode={isDarkMode} />
+                <Footer isDarkMode={isDarkMode} />
+            </ContactProvider>
         </main>
     );
 };

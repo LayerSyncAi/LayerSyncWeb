@@ -2,26 +2,43 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useContact } from '../contact/ContactProvider';
 
 /**
  * Shared building blocks for the rebranded site. Centralised here so every new
- * page (SynCRM, What We Build, Work, About, Contact) stays visually coherent
+ * page (SyncEstate, What We Build, Work, About, Contact) stays visually coherent
  * with the design tokens in docs/DESIGN-TOKENS.md.
  */
 
-/** Primary call-to-action. Site-wide default points at the diagnostic form. */
+/**
+ * Primary call-to-action. By default it opens the "Get in touch" dialog
+ * (components/contact): name and number, saved, then on to WhatsApp. Pass
+ * `to` to make it a plain link instead.
+ */
 export const CTAButton: React.FC<{
   to?: string;
   label?: string;
+  /** What they're asking about, shown in the dialog and the WhatsApp message. */
+  interest?: string;
+  /** Which button this is, kept with the enquiry. */
+  cta?: string;
   className?: string;
-}> = ({ to = '/contact', label = 'Book a diagnostic', className = '' }) => (
-  <Link
-    to={to}
-    className={`btn-glow group px-10 md:px-14 py-4 md:py-5 rounded-full font-bold uppercase tracking-[0.2em] text-[11px] md:text-xs inline-flex items-center gap-3 bg-black text-white dark:bg-white dark:text-black ${className}`}
-  >
-    {label} <ArrowRight className="w-4 h-4 cta-arrow" />
-  </Link>
-);
+}> = ({ to, label = 'Get in touch', interest, cta = 'cta', className = '' }) => {
+  const { openContact } = useContact();
+  const cls = `btn-glow group px-10 md:px-14 py-4 md:py-5 rounded-full font-bold uppercase tracking-[0.2em] text-[11px] md:text-xs inline-flex items-center gap-3 bg-black text-white dark:bg-white dark:text-black ${className}`;
+  if (to) {
+    return (
+      <Link to={to} className={cls}>
+        {label} <ArrowRight className="w-4 h-4 cta-arrow" />
+      </Link>
+    );
+  }
+  return (
+    <button type="button" onClick={() => openContact({ interest, cta })} className={cls}>
+      {label} <ArrowRight className="w-4 h-4 cta-arrow" />
+    </button>
+  );
+};
 
 /** Secondary / ghost link styled as a quiet pill. */
 export const GhostLink: React.FC<{ to: string; label: string; className?: string }> = ({

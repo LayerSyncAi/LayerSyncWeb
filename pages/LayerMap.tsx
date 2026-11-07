@@ -3,6 +3,7 @@ import { useOutletContext, Link } from 'react-router-dom';
 import { Download, ExternalLink, FileText, ArrowRight } from 'lucide-react';
 import { Eyebrow } from '../components/site/Primitives';
 import { Aurora, Reveal } from '../components/site/Backgrounds';
+import { useContact } from '../components/contact/ContactProvider';
 
 /**
  * The Layer Map — lead-magnet landing page.
@@ -27,6 +28,7 @@ const layers = [
 ];
 
 export const LayerMap: React.FC = () => {
+    const { openContact } = useContact();
   const { isDarkMode } = useOutletContext<{ isDarkMode: boolean }>();
   const dark = isDarkMode ?? true;
 
@@ -150,7 +152,7 @@ export const LayerMap: React.FC = () => {
               <p className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary leading-relaxed max-w-xl mx-auto mb-9">
                 LayerSync is an AI systems and software company in Harare. We build the custom
                 platforms, data systems and automation that move a business up the layers — including
-                SynCRM, our real-estate system of record.
+                SyncEstate, our operating system for estate agencies.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
                 <Link
@@ -159,12 +161,13 @@ export const LayerMap: React.FC = () => {
                 >
                   Explore LayerSync <ArrowRight className="w-4 h-4 cta-arrow" />
                 </Link>
-                <Link
-                  to="/contact"
+                <button
+                  type="button"
+                  onClick={() => openContact({ interest: 'The Layer Map', cta: 'layer-map' })}
                   className="group w-full sm:w-auto px-9 py-4 rounded-full font-bold uppercase tracking-[0.2em] text-[11px] md:text-xs inline-flex items-center justify-center gap-3 border border-black/15 dark:border-white/20 text-gray-700 dark:text-dark-text-secondary hover:border-black/40 dark:hover:border-white/50 hover:-translate-y-0.5 transition-all duration-300"
                 >
                   Book a diagnostic <ArrowRight className="w-4 h-4 cta-arrow" />
-                </Link>
+                </button>
               </div>
             </div>
           </Reveal>

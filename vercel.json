@@ -4,6 +4,13 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "vite",
+  "redirects": [
+    {
+      "source": "/syncrm",
+      "destination": "/sync-estate",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

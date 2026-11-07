@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useOutletContext, Link } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 import { ArrowRight, Building, Layers, Scale } from 'lucide-react';
 import { ProofPlaceholder } from '../site/Primitives';
+import { useContact } from '../contact/ContactProvider';
 
 export const WhoIsItFor: React.FC = () => {
+    const { openContact } = useContact();
     const { isDarkMode } = useOutletContext<{ isDarkMode: boolean }>();
     const safeDarkMode = isDarkMode ?? true;
 
@@ -87,9 +89,9 @@ export const WhoIsItFor: React.FC = () => {
                     <div className="relative z-10">
                         <h3 className={`hero-heading mb-8 text-shimmer`}>Train Your Team Before Your <span className="italic">Competitor Does.</span></h3>
                         <p className={`sub-heading mb-12 max-w-2xl mx-auto`}>Start with a diagnostic. We'll scope a curriculum specific to your departments, headcount, and current AI maturity — no commitment to scope.</p>
-                        <Link to="/contact" className="btn-glow px-10 md:px-14 py-5 rounded-full md:rounded-[24px] font-bold uppercase tracking-[0.15em] text-xs shadow-2xl inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-violet-600 text-white cursor-pointer mb-6">
+                        <button type="button" onClick={() => openContact({ interest: 'AI training for my team', cta: 'academy-final' })} className="btn-glow px-10 md:px-14 py-5 rounded-full md:rounded-[24px] font-bold uppercase tracking-[0.15em] text-xs shadow-2xl inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-violet-600 text-white cursor-pointer mb-6">
                             Book a diagnostic <ArrowRight className="w-4 h-4" />
-                        </Link>
+                        </button>
                         <p className="text-[10px] md:text-xs text-gray-500 dark:text-gray-400 font-bold uppercase tracking-widest">A short scoping conversation. No commitment.</p>
                     </div>
                 </motion.div>

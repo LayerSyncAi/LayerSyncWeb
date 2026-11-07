@@ -84,7 +84,7 @@ export const WhatWeBuild: React.FC = () => {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="sub-heading max-w-xl mb-12">
-                SynCRM is what we build for real estate. This is everything else: the operations
+                SyncEstate is what we build for real estate. This is everything else: the operations
                 systems, AI agents and custom software we build for businesses that have hit the
                 ceiling of manual work and off-the-shelf tools.
               </p>

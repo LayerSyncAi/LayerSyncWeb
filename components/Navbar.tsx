@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useScroll, useMotionValueEvent, AnimatePresence, motion } from 'framer-motion';
-import { Sun, Moon, Menu, X, ArrowRight, Calendar } from 'lucide-react';
+import { Sun, Moon, Menu, X, ArrowRight } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 import { Logo } from './Logo';
+import { useContact, WhatsAppGlyph } from './contact/ContactProvider';
 
 interface NavbarProps {
     isDarkMode: boolean;
@@ -10,7 +11,7 @@ interface NavbarProps {
 }
 
 const navLinks = [
-    { name: 'SynCRM', href: '/syncrm' },
+    { name: 'SyncEstate', href: '/sync-estate' },
     { name: 'What We Build', href: '/what-we-build' },
     { name: 'Work', href: '/work' },
     { name: 'About', href: '/about' },
@@ -20,6 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => 
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { scrollY } = useScroll();
+    const { openContact } = useContact();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         setIsScrolled(latest > 50);
@@ -59,9 +61,13 @@ export const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => 
                     >
                         {isDarkMode ? <Sun className="w-4 h-4 text-white" /> : <Moon className="w-4 h-4 text-black" />}
                     </button>
-                    <Link to="/contact" className={`btn-glow px-8 py-3 rounded-full font-bold uppercase tracking-widest text-[10px] inline-flex items-center gap-2 bg-black text-white dark:bg-white dark:text-black`}>
-                        <Calendar className="w-3.5 h-3.5" /> Book a diagnostic
-                    </Link>
+                    <button
+                        type="button"
+                        onClick={() => openContact({ cta: 'nav' })}
+                        className={`btn-glow px-8 py-3 rounded-full font-bold uppercase tracking-widest text-[10px] inline-flex items-center gap-2 bg-black text-white dark:bg-white dark:text-black`}
+                    >
+                        <WhatsAppGlyph className="w-4 h-4" /> Get in touch
+                    </button>
                 </div>
 
                 {/* Mobile Controls */}
@@ -118,13 +124,13 @@ export const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => 
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5 }}
                             >
-                                <Link
-                                    to="/contact"
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                <button
+                                    type="button"
+                                    onClick={() => { setIsMobileMenuOpen(false); openContact({ cta: 'nav-mobile' }); }}
                                     className="w-full btn-glow py-4 rounded-full bg-white text-black font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-3"
                                 >
-                                    <Calendar className="w-4 h-4" /> Book a diagnostic <ArrowRight className="w-4 h-4" />
-                                </Link>
+                                    <WhatsAppGlyph className="w-4 h-4" /> Get in touch <ArrowRight className="w-4 h-4" />
+                                </button>
                             </motion.div>
                         </div>
                     </motion.div>

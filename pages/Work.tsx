@@ -17,9 +17,9 @@ export const Work: React.FC = () => {
 
   // Real, shipped product screens lead. Design concepts are labelled as such.
   const showcase: ShowcaseItem[] = [
-    { title: 'SynCRM — pipeline dashboard', desc: 'Live lead pipeline, win rate and lead scoring', image: '/syncrm-dashboard.webp', tag: 'SynCRM', badge: 'Live product' },
-    { title: 'SynCRM — agent performance', desc: 'Assigned, contacted, viewings and conversion by agent', image: '/syncrm-reports.webp', tag: 'SynCRM', badge: 'Live product' },
-    { title: 'SynCRM Copilot', desc: 'Ask about your pipeline and act on leads in plain language', image: '/syncrm-copilot.webp', tag: 'SynCRM', badge: 'Live product' },
+    { title: 'SyncEstate · SynCRM pipeline dashboard', desc: 'Live lead pipeline, win rate and lead scoring', image: '/syncrm-dashboard.webp', tag: 'SyncEstate', badge: 'Live product' },
+    { title: 'SyncEstate · SynCRM agent performance', desc: 'Assigned, contacted, viewings and conversion by agent', image: '/syncrm-reports.webp', tag: 'SyncEstate', badge: 'Live product' },
+    { title: 'SyncEstate · SynCRM Copilot', desc: 'Ask about your pipeline and act on leads in plain language', image: '/syncrm-copilot.webp', tag: 'SyncEstate', badge: 'Live product' },
     { title: 'Energy dashboard', desc: 'Operations dashboard design', image: '/portfolio-1.webp', tag: 'Web', fit: 'object-left-top', badge: 'Concept' },
     { title: 'Customer portal', desc: 'Client-facing portal design', image: '/portfolio-3.webp', tag: 'Web', fit: 'object-center', badge: 'Concept' },
   ];
@@ -27,19 +27,19 @@ export const Work: React.FC = () => {
   /** Live, shipped platforms — verifiable, with public URLs. */
   const products = [
     {
-      name: 'SynCRM',
-      kind: 'Real-estate system of record',
+      name: 'SyncEstate',
+      kind: 'Real-estate operating system',
       href: 'https://syncrm.vercel.app',
       accent: 'orange' as const,
       summary:
-        'An operational platform that replaces the spreadsheet-and-messaging black box most sales teams run on.',
+        'One login for an estate agency: leads, lettings, valuations, trust accounts and developments, replacing the spreadsheet-and-messaging black box most agencies run on.',
       built: [
-        'Pipeline and Kanban deal tracking',
-        'Lead scoring',
-        'Automated listing ingestion from external portals',
-        'Contact management',
-        'Email campaigns',
-        'AI copilot layer',
+        'SynCRM: pipeline, lead scoring and viewing forms',
+        'SyncStay: maintenance, inspections, rent and arrears',
+        'SyncWorth: valuations to signed report',
+        'SyncFinance: double-entry trust accounting',
+        'SyncDev: stands, reservations and instalments',
+        'SyncMedia and an AI copilot layer',
       ],
     },
     {
@@ -76,7 +76,7 @@ export const Work: React.FC = () => {
           <Reveal delay={0.1}>
             <p className="sub-heading max-w-2xl mx-auto">
               We'd rather show you one real system that changed how a business runs than a wall of
-              logos. SynCRM is our flagship, and it's live today — these are its actual screens.
+              logos. SyncEstate is our flagship, and it's live today — these are its actual screens.
             </p>
           </Reveal>
         </div>
@@ -128,8 +128,8 @@ export const Work: React.FC = () => {
                       >
                         Visit the live platform <ExternalLink className="w-3.5 h-3.5" />
                       </a>
-                      {p.name === 'SynCRM' && (
-                        <Link to="/syncrm" className="text-[11px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-dark-text-tertiary inline-flex items-center gap-2 group hover:text-brand-orange transition-colors">
+                      {p.name === 'SyncEstate' && (
+                        <Link to="/sync-estate" className="text-[11px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-dark-text-tertiary inline-flex items-center gap-2 group hover:text-brand-orange transition-colors">
                           Read more <ArrowRight className="w-4 h-4 cta-arrow" />
                         </Link>
                       )}
