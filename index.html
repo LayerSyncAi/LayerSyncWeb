@@ -30,9 +30,13 @@
     <script>
         // Brand tokens for the Tailwind Play CDN (runtime JIT)
         tailwind.config = {
+            // Follow the site's own theme toggle (the `dark` class on <html>),
+            // as tailwind.config.ts intends, not the visitor's OS setting.
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
+                        'dark-text': { primary: '#F8FAFC', secondary: '#CBD5E1', tertiary: '#94A3B8' },
                         brand: {
                             orange: { light: '#E5946B', DEFAULT: '#D36135', dark: '#B14A24' },
                             green: { light: '#9CC489', DEFAULT: '#7FB069', dark: '#5E8E49' },
